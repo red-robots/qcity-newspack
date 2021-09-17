@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------
+# COLORS
+--------------------------------------------------------------*/
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #924020;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #424141;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+$color-red: #924020;
+$color-yellow: #c4a92f;
+$color-gray: #eeeeee;
+$color-med-gray: #9f9f9f;
+$color-dark-gray: #58595b; // h3
+$color-black: #262425; // h2 & h4
+$color-light-gray: #cecece;
+$color-blue: #1C788C;
+$title_gray: #e2e2e2;
+
+.color-red {color: $color-red;}
+.color-yellow {color: $color-yellow;}
+.color-gray {color: $color-gray;}
+.color-med-gray {color: $color-med-gray;}
+.color-dark-gray {color: $color-dark-gray;}
+.color-black {color: $color-black;}
+
+.bg-red {background-color: $color-red;}
+.bg-yellow {background-color: $color-yellow;}
+.bg-gray {background-color: $color-gray;}
+.bg-med-gray {background-color: $color-med-gray;}
+.bg-dark-gray {background-color: $color-dark-gray;}
+.bg-black {background-color: $color-black;}
+
+/*--------------------------------------------------------------
+# TYPOGRAPHY
+--------------------------------------------------------------*/
+// $font__main: 'UniversLTPro-55Roman';
+// $font__main__italic: 'UniversLTPro-55Oblique';
+// $font-heading: 'UniversLTPro-65Bold';
+// $font-light: 'UniversLTPro-45Light';
+
+$font__main: 'Roboto', sans-serif;
+$font__main__italic: 'Roboto', sans-serif;
+$font-heading: 'Roboto', sans-serif;
+$font-light: 'Roboto', sans-serif;
+
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+
+/*--------------------------------------------------------------
+# STRUCTURE
+--------------------------------------------------------------*/
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+$tabwidth: 768px;
+$midwidth: 900px;
+$deskwidth: 1250px;
+
+
+/*--------------------------------------------------------------
+# MIXINS
+--------------------------------------------------------------*/
+
+// Rem output with px fallback
+
+$xs: 600px;
+$tab: 820px;
+$mid: 960px;
+$desk: 1300px;
+$xl: 1200px;
+
+@mixin xs { @media (min-width: $xs) { @content; } }
+@mixin tab { @media (min-width: $tab) { @content; } }
+@mixin mid { @media (min-width: $mid) { @content; } }
+@mixin desk {  @media (min-width: $desk) { @content; } }
+@mixin xl {  @media (min-width: $xl) { @content; } }
+
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+@mixin flexbox(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flexbox-flex($first, $second, $third) {
+	-webkit-box-flex: $first $second $third;
+	-moz-box-flex: $first $second $third;
+	-webkit-flex: $first $second $third;
+	-ms-flex: $first $second $third;
+	flex: $first $second $third;
+}
+@mixin flexbox-wrap($value){
+	-webkit-flex-wrap: $value;
+	flex-wrap: $value;
+}
+@mixin flexbox-align-content($value){
+	-webkit-align-content: $value;
+	align-content: $value;
+}
+@mixin flexbox-align-items($value){
+	-webkit-align-items: $value;
+	align-items: $value;
+}
+@mixin flexbox-justify($value){
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+@mixin flexbox-align-self($value){
+	-webkit-align-self: $value;
+	align-self: $value;
+}
+@mixin flexbox-direction($value){
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+}
+@mixin translatexy($value1,$value2){
+	-ms-transform: translateX($value1) translateY($value2);
+	-moz-transform: translateX($value1) translateY($value2);
+	-webkit-transform: translateX($value1) translateY($value2);
+	transform: translateX($value1) translateY($value2);
+}
+
+@mixin flexgroup() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+}
+
+@mixin flexgroup-center() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+	@include flexbox-align-items(center);
+}
+
+@mixin animated($duration:1s) {
+	-webkit-animation-duration: $duration;
+	animation-duration: $duration;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@mixin shadow() {
+	-webkit-box-shadow: 5px 8px 16px -7px rgba(0,0,0,0.43);
+	-moz-box-shadow: 5px 8px 16px -7px rgba(0,0,0,0.43);
+	box-shadow: 5px 8px 16px -7px rgba(0,0,0,0.43);
+}
+@mixin innershadow() {
+	box-shadow: -1px 7px 23px -14px rgba(0,0,0,0.48) inset;
+	-webkit-box-shadow: -1px 7px 23px -14px rgba(0,0,0,0.48) inset;
+	-moz-box-shadow: -1px 7px 23px -14px rgba(0,0,0,0.48) inset;
+}
+
+@function tint($color, $percentage) {@return mix(white, $color, $percentage);}
+@function shade($color, $percentage) {@return mix(black, $color, $percentage);}
+
+@keyframes spin{
+	from { 
+		transform: rotate(0deg); 
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+	}
+	to { 
+		transform: rotate(360deg); 
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+	}
+}
+
+

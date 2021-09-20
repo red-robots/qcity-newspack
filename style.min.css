@@ -224,6 +224,7 @@ a:focus{outline:thin dotted;text-decoration:underline}
 .dd-menu button:active{-webkit-transform:scale(0.99);transform:scale(0.99)}
 .dd-menu ul,.dd-menu li{list-style:none;margin:0;padding:0}
 .dd-menu li{position:relative}
+button.submenu-expand,button.submenu-expand:hover{background:0;-webkit-box-shadow:none;box-shadow:none}
 .dd-menu .submenu-expand{display:inline-block}
 .dd-menu .sub-menu>li{display:block}
 .dd-menu .sub-menu>li.menu-item-has-children .submenu-expand{position:absolute;width:calc(24px + 1rem);bottom:0;color:white;line-height:1;padding:calc(0.5 * 1rem);margin-right:0}
@@ -2315,6 +2316,7 @@ body.single #content,body.single #primary{position:relative;z-index:2}
 .content-area-single{width:100%;margin:0 auto;max-width:700px}
 .content-area-title{width:100%;margin:0 auto}
 .content-area{width:100%;margin:0 auto}
+.content-area-home{width:100%;margin:0 auto}
 .widget-area{width:100%;margin:0 auto;clear:both}
 section.red-band{width:100%;float:left;position:relative;margin:20px 0 4px 0;background-color:#924020;padding:2px 0;text-align:right;color:#fff;font-size:13px;display:none}
 section.red-band a{display:inline-block;padding:6px 5px 2px;color:#fff;-webkit-transition:all ease .2s;transition:all ease .2s;text-decoration:none}
@@ -3947,7 +3949,8 @@ nav.mobilemenu .mobilemain{display:none}
 body.category #content{margin-top:40px}
 #content{margin-top:18px}
 .content-area-title{width:66%;float:left;margin:0}
-.content-area{width:68%;float:left;margin:0;padding-bottom:50px;min-height:800px}
+.content-area{width:68%;margin:0;padding-bottom:50px;min-height:800px}
+.content-area-home{width:68%;margin:0;padding-bottom:50px;min-height:800px}
 .widget-area{width:28%;float:right;margin:0;clear:none;padding-bottom:40px}
 section.red-band{display:block}
 .logo,h1.logo{width:130px;margin:0;top:10px;left:0}

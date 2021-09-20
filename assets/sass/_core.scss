@@ -1172,7 +1172,22 @@ body.category {
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 68%;
-		float: left;
+		// float: left;
+		margin: 0;
+		padding-bottom: 50px;
+		min-height: 800px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.content-area-home {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 68%;
+		// float: left;
 		margin: 0;
 		padding-bottom: 50px;
 		min-height: 800px;

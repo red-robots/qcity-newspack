@@ -1,3 +1,4 @@
+<!-- single-story.php -->
 <?php
 $totalPost = get_count_stories();
 $cat = get_field("story_main_page_url","option");

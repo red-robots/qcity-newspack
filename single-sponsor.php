@@ -1,3 +1,4 @@
+<!-- single-sponsor.php -->
 <?php 
 if(have_posts()): the_post();
 	$sponsors = get_field('sponsors');

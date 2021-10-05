@@ -31,7 +31,7 @@ $day_plus = sprintf('%02s', $day);
 $today = date('Ym') . $day_plus;
 ?>
 
-<div id="primary" class="content-area page-with-poweredby page-job-new pageEventsNew">
+<div id="primary" class="content-area-center page-with-poweredby page-job-new pageEventsNew">
 	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php  
@@ -81,7 +81,7 @@ $today = date('Ym') . $day_plus;
 
 			<?php if ($logo) { ?>
 			<div class="sponsored-logo">
-				<div class="wrapper">
+				<div class="qcwrapper">
 					<span class="logo-img">
 						<?php if ($poweredby) { ?>
 						<span class="poweredby"><?php echo $poweredby ?></span>	
@@ -94,7 +94,7 @@ $today = date('Ym') . $day_plus;
 			</div>	
 			<?php } ?>
 			<header class="title-bar-gray">
-				<div class="wrapper">
+				<div class="qcwrapper">
 					<h1 class="t1"><?php echo $main_page_title; ?></h1>
 					<?php if ($subtitle) { ?>
 					<h2 class="t2"><?php echo $subtitle ?></h2>	
@@ -110,7 +110,7 @@ $today = date('Ym') . $day_plus;
 
 			<?php $buttons = get_field("cta_buttons"); ?>
 			<div class="entry-content">
-				<div class="wrapper">
+				<div class="qcwrapper">
 					
 					<?php /* BUTTONS */ ?>
 					<?php include( locate_template('template-parts/event-btn.php') ); ?>
@@ -121,7 +121,7 @@ $today = date('Ym') . $day_plus;
 					</div>	
 					<?php } ?>
 
-					<div class="single-page-event-wrapper fw-left">
+					<div class="single-page-event-qcwrapper fw-left">
 
 						<div id="processing-data" class="fw-left"><span class="load-icon-2"><i class="fas fa-sync-alt spin"></i></span></div>
 

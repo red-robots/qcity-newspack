@@ -1,3 +1,4 @@
+<!-- single-feature.php -->
 <?php
 /**
  * Template Name: One column

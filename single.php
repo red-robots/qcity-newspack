@@ -1,65 +1,95 @@
+<!-- single.php -->
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all single posts.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Newspack
+ * @package ACStarter
  */
 
-get_header();
+get_header(); 
+$img 		= get_field('story_image');
+$video 		= get_field('video_single_post');
+$sponsors 	= get_field('sponsors');	
+$caption 	= ( $img ) ? $img['caption'] : '';
+$postType = get_post_type();
+$terms = ($postType=='post') ? get_the_terms(get_the_ID(),'category') : '';
+$is_sponsored_post = array();
+if($terms) {
+	foreach($terms as $term) {
+		$catname = $term->slug;
+		if($catname=='sponsored-post') {
+			$is_sponsored_post[] = $term;
+		}
+	}
+}
+$content_class = ($is_sponsored_post) ? 'is-sponsored-post':'normal-post';
 ?>
+<div id="primary" class="content-area-full single-post-newlayout <?php echo $content_class ?>">
+	<main id="main" class="site-main" role="main">
+		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="single-page">
 
-	<section id="primary" class="content-area <?php echo esc_attr( newspack_get_category_tag_classes( get_the_ID() ) ); ?>">
-		<main id="main" class="site-main">
+			<div class="content-single-page">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				<div  class="content-inner-wrap">
+					<?php if ($is_sponsored_post) { ?>
+						<div class="sponsor-top">
+							<div class="category ">
+								<?php get_template_part('template-parts/primary-category'); ?>
+								<?php 
+								$info = get_field("spcontentInfo","option");
+				        if($info) {
+				            $i_title = $info['title'];
+				            $i_text = $info['text'];
+				            $i_display = ($info['display'] && $info['display']=='on') ?  true : false;
+				        } else {
+				            $i_title = '';
+				            $i_text = '';
+				            $i_display = '';
+				        } ?>	
+			  				<?php if ($i_display && $i_title && $i_text) { ?>
+			            <span class="whatisThis" style="padding-left:4px"> - <a href="#" id="sponsorToolTip"><?php echo $i_title ?></a></span>
+			            <div class="whatIsThisTxt"><?php echo $i_text ?></div>
+			        	<?php } ?>
+							</div>
+							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+							<div class="single-page-excerpt">
+								<?php echo get_the_excerpt(); ?>
+							</div>				
+						</div>
+					<?php } else { ?>
 
-				// Template part for large featured images.
-				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside', 'above' ) ) ) :
-					get_template_part( 'template-parts/post/large-featured-image' );
-				else :
-				?>
-					<header class="entry-header">
-						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-					</header>
+						<div class="category "><?php get_template_part('template-parts/primary-category'); ?></div>
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<div class="single-page-excerpt"><?php echo get_the_excerpt(); ?></div>
 
+					<?php } ?>
+				</div>
+
+
+				<?php if( $img ) { ?>
+					<div class="story-image s2">
+						<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+					</div>
+				<?php } ?>
+
+				<?php if( $caption ): ?>
+					<div class="entry-meta">
+						<div class="post-caption"><?php echo $caption; ?></div>
+					</div>
 				<?php endif; ?>
 
-				<div class="main-content">
+			</div>
 
-					<?php
-					if ( is_active_sidebar( 'article-1' ) ) {
-						dynamic_sidebar( 'article-1' );
-					}
+			<?php get_template_part( 'template-parts/content', get_post_format() );	?>
 
-					// Place smaller featured images inside of 'content' area.
-					if ( 'small' === newspack_featured_image_position() ) :
-						newspack_post_thumbnail();
-					endif;
+		</div>
+		<?php endwhile; ?>
+		
+	</main>
+</div>
 
-					get_template_part( 'template-parts/content/content-single', 'single' );
-
-					newspack_previous_next();
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						newspack_comments_template();
-					}
-
-					?>
-				</div><!-- .main-content -->
-
-			<?php
-				endwhile;
-				get_sidebar();
-			?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
+<?php 
 get_footer();

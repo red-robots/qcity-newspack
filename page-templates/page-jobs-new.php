@@ -8,7 +8,7 @@ $page_id = get_the_ID();
 $job_category = ( isset($_GET['category']) && $_GET['category'] ) ? $_GET['category'] : '';
 ?>
 
-<div id="primary" class="content-area page-with-poweredby page-job-new">
+<div id="primary" class="content-area-center page-with-poweredby page-job-new">
 	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php  

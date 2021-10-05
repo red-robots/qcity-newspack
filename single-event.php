@@ -1,3 +1,4 @@
+<!-- single-event.php -->
 <?php
 /**
  * The template for displaying all single posts.

@@ -1,3 +1,4 @@
+<!-- single-business_listing.php -->
 <?php
 /**
  * The template for displaying all single posts.

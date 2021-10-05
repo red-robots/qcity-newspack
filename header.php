@@ -14,10 +14,35 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 	<?php wp_head(); ?>
 </head>
+<?php
+$dd = date('d') - 1;
+$day = str_pad($dd,2,'0',STR_PAD_LEFT);
+$nexday = str_pad($dd+1,2,'0',STR_PAD_LEFT);
+$dateToday = date('Ym') . $day;
+$dateRange = '';
+for($i=0; $i<3; $i++) {
+  $d = $day + $i;
+  $days = str_pad($d,2, '0', STR_PAD_LEFT);
+  $comma = ($i>0) ? ',':'';
+  $dateRange .= $comma . date('Ym'). $days;
+}
+$start_end = $dateToday . ',' . date('Ym') . $nexday;
+$hasPoweredByLogo = ($current_page_id) ? get_page_with_top_logo($current_page_id) : '';
+$bodyClass = ($hasPoweredByLogo) ? 'hasPoweredByLogo':'';
+$is_member_page = false;
+if( is_page() ) {
+  $pageTemplate = get_page_template_slug($current_page_id);
+  if($pageTemplate=="page-membership-new.php") {
+    $is_member_page = true;
+  }
+}
 
-<body <?php body_class(); ?>>
+?>
+
+<body <?php body_class($bodyClass); ?> data-today="<?php echo date('Ymd') ?>" data-dates="<?php echo $start_end ?>" data-range="<?php echo $dateRange ?>">
 <?php
 
 do_action( 'wp_body_open' );
@@ -53,7 +78,7 @@ endif;
 			</div><!-- .wrapper -->
 		</div><!-- .above-header-widgets -->
 	<?php endif; ?>
-
+	<?php if (!$is_member_page) { ?>
 	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
 		<?php if ( true === $header_sub_simplified && ! is_front_page() ) : ?>
@@ -280,7 +305,7 @@ endif;
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
-
+	<?php } // close if is !Membership page ?>
 	<?php
 	if ( function_exists('yoast_breadcrumb') ) {
 		yoast_breadcrumb( '<div class="site-breadcrumb desktop-only"><div class="wrapper">','</div></div>' );

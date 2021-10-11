@@ -1146,7 +1146,7 @@ body.category {
 	float: left;
 	clear: both;
 	@media screen and (min-width: $tabwidth) {
-		margin-top: 18px;
+		// margin-top: 18px;
 	}
 	@media screen and (min-width: $deskwidth) {
 
@@ -6008,7 +6008,7 @@ body.page-template-page-media{
 	}
 
 	#content{
-		margin-top: 60px;
+		// margin-top: 60px;
 	}
 }
 
@@ -8385,11 +8385,11 @@ body.category.category-stories,
 body.single.single-story {
 	#content {
 		margin-top: 0;
-		padding-top: 104px;
+		// padding-top: 104px;
 	}
 	&.logged-in.admin-bar {
 		#content {
-			padding-top: 97px;
+			// padding-top: 97px;
 		}
 	}
 	.swp_floating_horizontal_wrapper.bottom,
@@ -8400,7 +8400,7 @@ body.single.single-story {
 body.logged-in.admin-bar.page-template-page-newsletter {
 	@media screen and (max-width: 782px) {
 		#content {
-			padding-top: 20px;
+			// padding-top: 20px;
 		}
 	}
 }
@@ -8892,14 +8892,14 @@ body.logged-in.admin-bar {
 		top: 25px;
 	}
 	#content {
-		padding-top: 97px;
+		// padding-top: 97px;
 	}
 	&.tax-business_category #content,
 	&.page-template-page-business-directory #content,
 	&.page-template-page-black-map #content {
 		padding-top: 5px!important;
 		@include tab {
-			padding-top: 77px!important;
+			// padding-top: 77px!important;
 		}
 	}
 	.content-area-full.top-logo-page #main .top-logo {
@@ -9859,7 +9859,7 @@ body.modal-open {
 @media screen and (max-width: 767px) {
 	body.category.category-stories #content, 
 	body.single.single-story #content {
-		padding-top: 86px;
+		// padding-top: 86px;
 	}
 	.new-page-fullwrap .sponsor-info {
 		a,img {
@@ -12158,7 +12158,7 @@ body.logged-in.admin-bar.page-template-page-business-directory #content {
 body.page-template-page-jobs-new {
 	&.logged-in.admin-bar {
 		#content.site-content {
-			padding-top: 76px;
+			// padding-top: 76px;
 			margin-right: 0;
 		}
 	}

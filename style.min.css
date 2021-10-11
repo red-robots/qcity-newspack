@@ -2899,7 +2899,6 @@ section.red-band{padding-right:30px}
 .mobile-body{display:block;padding-top:100px}
 .single-page h1,.single-page h2{margin-bottom:20px}
 body.page-template-page-media .qcwrapper{max-width:1050px}
-body.page-template-page-media #content{margin-top:60px}
 .mobile-separator{display:none}
 .line-separator{border-bottom:1px solid #ccc;margin-bottom:20px;height:5px;display:block}
 .single-page .featured_image{margin-top:30px}
@@ -3123,8 +3122,7 @@ section.c-sponsor-block.sponsor-paid-wrapper .c-sponsor-image-link img.c-sponsor
 .mobileSubscribe #closeSubscribe{cursor:pointer;position:absolute;top:12px;right:12px;z-index:5;color:#FFF;display:block;width:20px;height:20px;text-align:center;font-family:"UniversLTPro-55Roman",Arial,'sans-serif';font-size:24px;line-height:1}
 .mobileSubscribe #closeSubscribe span{display:inline-block;position:relative}
 #page.site{position:relative;overflow-x:hidden;overflow-y:auto}
-body.category.category-stories #content,body.single.single-story #content{margin-top:0;padding-top:104px}
-body.category.category-stories.logged-in.admin-bar #content,body.single.single-story.logged-in.admin-bar #content{padding-top:97px}
+body.category.category-stories #content,body.single.single-story #content{margin-top:0}
 body.category.category-stories .swp_floating_horizontal_wrapper.bottom,body.category.category-stories .ads_home_leaderboard,body.single.single-story .swp_floating_horizontal_wrapper.bottom,body.single.single-story .ads_home_leaderboard{display:none !important}
 .share-link{position:relative;visibility:hidden}
 .share-link .share{display:none;position:absolute;top:32px;right:0;background:#e6e6e6;padding:0 15px}
@@ -3199,7 +3197,6 @@ body.scrolled .content-area-full.top-logo-page #main .top-logo .poweredby{font-s
 body.scrolled .content-area-full.top-logo-page #main .top-logo .logo-img img{width:auto;height:40px}
 body.scrolled .content-area-full.top-logo-page #main .top-logo .business-map-counter{display:inline-block;top:-16px;right:6px;-webkit-transform:scale(0.8);transform:scale(0.8)}
 body.logged-in.admin-bar .mobile-stick{top:25px}
-body.logged-in.admin-bar #content{padding-top:97px}
 body.logged-in.admin-bar.tax-business_category #content,body.logged-in.admin-bar.page-template-page-business-directory #content,body.logged-in.admin-bar.page-template-page-black-map #content{padding-top:5px !important}
 body.logged-in.admin-bar .content-area-full.top-logo-page #main .top-logo{padding:8px 0 7px}
 body.logged-in.admin-bar .content-area-full.top-logo-page #main .top-logo .business-map-counter.postViews{right:15px}
@@ -3681,7 +3678,7 @@ body.logged-in.admin-bar.page-template-page-black-map #content{padding-top:5px}
 .page-with-poweredby .sponsored-logo .logo-img{display:inline-block}
 .page-with-poweredby .sponsored-logo .logo-img .poweredby{display:block;width:100%;font-size:10px;line-height:1;color:#58595b;text-transform:uppercase;letter-spacing:1px;margin:0 0 5px;display:block}
 .page-with-poweredby .sponsored-logo .logo-img img{width:auto;height:60px}
-body.page-template-page-jobs-new.logged-in.admin-bar #content.site-content{padding-top:76px;margin-right:0}
+body.page-template-page-jobs-new.logged-in.admin-bar #content.site-content{margin-right:0}
 .pageCTAWrap .pageCTAButtons,.page-job-new .pageCTAButtons{margin-bottom:0;position:relative;z-index:10}
 .pageCTAWrap .pageCTAButtons .flex,.page-job-new .pageCTAButtons .flex{margin:0;padding:0;list-style:none}
 .pageCTAWrap .pageCTAButtons .jbtn,.page-job-new .pageCTAButtons .jbtn{width:33.33%;position:relative}
@@ -3913,7 +3910,6 @@ nav.mobilemenu .mobilemain{display:none}
 .qcwrapper,body.single .site-footer .qcwrapper{width:100%}
 .qcwrapper .right,.qcwrapper .left,body.single .site-footer .qcwrapper .right,body.single .site-footer .qcwrapper .left{width:46%}
 body.category #content{margin-top:40px}
-#content{margin-top:18px}
 .content-area-title{width:66%;float:left;margin:0}
 .content-area{width:68%;float:left;margin:0;padding-bottom:50px;min-height:800px}
 .widget-area{width:28%;float:right;margin:0;clear:none;padding-bottom:40px}
@@ -4224,7 +4220,6 @@ body.single-story .story-view-all{top:40px}
 body.single-story .story-view-all a.viewAll{width:85px;height:85px;top:0}
 body.single-story .storySponsoredBy{padding-left:0;padding-right:0}
 body.scrolled .content-area-full.top-logo-page #main .top-logo{top:102px}
-body.logged-in.admin-bar.tax-business_category #content,body.logged-in.admin-bar.page-template-page-business-directory #content,body.logged-in.admin-bar.page-template-page-black-map #content{padding-top:77px !important}
 body.logged-in.admin-bar .content-area-full.top-logo-page #main .top-logo{padding:12px 0 7px}
 body.logged-in.admin-bar.scrolled .content-area-full.top-logo-page #main .top-logo{top:127px}
 #otherPostPopUp .new-page-wrapper{padding:20px}
@@ -4517,8 +4512,7 @@ body.hasPoweredByLogo.logged-in.admin-bar #content.site-content .content-area.pa
 .pageCTAWrap .biz-job-wrap .job .info,.page-job-new .biz-job-wrap .job .info{text-align:left}
 .pageCTAWrap .biz-job-wrap .job .view,.page-job-new .biz-job-wrap .job .view{width:25%}
 body.page-template-page-business-directory .titlediv .business-map-counter{display:block;top:55px;right:10px}
-}@media screen and (max-width:782px){body.logged-in.admin-bar.page-template-page-newsletter #content{padding-top:20px}
-body.logged-in.admin-bar{padding-top:85px}
+}@media screen and (max-width:782px){body.logged-in.admin-bar{padding-top:85px}
 body.logged-in.admin-bar .site .site-header,body.logged-in.admin-bar .site .site-header .mobile-stick{top:46px !important}
 body.logged-in.admin-bar #wpadminbar{position:fixed !important;top:0;left:0;width:100%}
 body.logged-in.admin-bar .category-elections .page-top-area{padding-top:0}
@@ -4673,7 +4667,6 @@ ul.rp4wp-posts-list .rp4wp-col-last{width:99% !important;padding-right:0 !import
 .comment-form-email,.comment-form-url,.comment-form-city,.comment-form-phone,.comment-form-author{width:100%;display:block}
 .mailing-address h3{font-size:1.4rem}
 #section2.category-elections .entry.fullwidth .story-block .photo{height:200px !important}
-body.category.category-stories #content,body.single.single-story #content{padding-top:86px}
 .new-page-fullwrap .sponsor-info a,.new-page-fullwrap .sponsor-info img{width:150px}
 .new-page-fullwrap .share-link a.back{margin-right:0}
 .mobilemain a.headerRedBtn.redbutton{display:none;background:red;color:#FFF;position:relative;padding:10px 15px;line-height:1.2;border-radius:100px;margin-right:0;margin-bottom:10px;text-align:center;-webkit-transition:all ease .3s}

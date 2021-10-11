@@ -25,7 +25,7 @@ $twitter = get_field('twitter_link', 'option');
 				</div>
 				<div class="footer-nav">
 					<div class="footer-main-nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
 					</div>
 					<div class="footer-submenu-nav">
 						<?php wp_nav_menu(array('theme_location'=>'burger','menu_class'=>'main','container'=>'ul')); ?>

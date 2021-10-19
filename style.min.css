@@ -397,7 +397,6 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover{background-color:#111;
 .wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:auto;max-width:90%;width:1200px}
 #page{overflow:hidden;width:100%}
 .site-content{min-height:30vh;margin-top:1.5rem}
-#primary-home{margin:auto}
 #secondary{margin-top:1rem}
 .hide{display:none}
 .post-template-single-feature .main-content,.page-template-single-feature .main-content,.archive-one-column #main,.newspack-front-page.page-template-single-feature .site-main{margin-left:auto;margin-right:auto;max-width:780px;width:100%}
@@ -2540,6 +2539,7 @@ p{margin-top:1em;margin-bottom:1em}
 .byline,.updated:not(.published){display:none}
 .single .byline,.group-blog .byline{display:inline}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
+.entry-content.home-content{margin:0}
 .page-links{clear:both;margin:0 0 1.5em}
 .story-block{width:100%;position:relative;background-color:#fff;margin-bottom:20px;padding-bottom:10px;overflow:hidden;-webkit-transition:all ease .2s;transition:all ease .2s}
 .story-block h3{font-size:20px;z-index:1;line-height:1.1;clear:none;display:inline}
@@ -3854,6 +3854,10 @@ body.single-post .entry-content.entry-content-v2 div[data-google-query-id]:after
 body.single-post .entry-content.entry-content-v2 div[data-google-query-id] div,body.single-post .entry-content.entry-content-v2 div[data-google-query-id] iframe,#primary.single-post-newlayout .entry-content.entry-content-v2 div[data-google-query-id] div,#primary.single-post-newlayout .entry-content.entry-content-v2 div[data-google-query-id] iframe{position:relative;z-index:10}
 body.single-post .content-single-page .gform_footer input.gform_button,#primary.single-post-newlayout .content-single-page .gform_footer input.gform_button{height:35px;top:0;padding:11px 15px 10px !important}
 .content-area-center{width:100%;margin:0 auto;overflow:hidden}
+nav.main-navigation li{font-size:16px}
+.home-content .home-hero{margin:0}
+body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:0}
+body.newspack-front-page .editors-choice{width:100%;max-width:100%;margin-top:0;margin-right:0}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}
 .c-sponsor-block__label{position:static}
 .c-sponsor-block__sponsor{font-size:.85rem;margin-top:35px}

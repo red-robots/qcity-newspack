@@ -6,11 +6,14 @@
  *
  * @package Newspack
  */
-
+$homeClass = '';
+if( is_front_page() ) {
+	$homeClass = 'home-content';
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">
+	<div class="entry-content <?php echo $homeClass; ?>">
 		<?php
 		the_content();
 

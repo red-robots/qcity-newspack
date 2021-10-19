@@ -16,7 +16,7 @@ $twitter = get_field('twitter_link', 'option');
     </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper">
+		<div class="qcwrapper">
 
 			<section class="footer-section">
 

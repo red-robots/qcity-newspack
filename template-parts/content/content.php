@@ -16,7 +16,7 @@
 
 	<?php newspack_post_thumbnail(); ?>
 
-	<div class="entry-contentz">
+	<div class="entry-content">
 		<?php
 		the_content(
 			sprintf(

@@ -2266,25 +2266,25 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover {
     margin-top: 4rem;
   }
 }
-
-// #primary-home {
-//   margin: auto;
-//   max-width: 90%;
-//   width: 1200px;
-// }
+// changed
+#primary-home {
+  margin: auto;
+  max-width: 90%;
+  width: 1200px;
+}
 
 #secondary {
   margin-top: 1rem;
 }
-
-// @media only screen and (min-width: 782px) {
-//   .single.has-sidebar #main,
-//   .page:not(.newspack-front-page).has-sidebar #main {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//   }
-// }
+// changed
+@media only screen and (min-width: 782px) {
+  .single.has-sidebar #main,
+  .page:not(.newspack-front-page).has-sidebar #main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 
 @media only screen and (min-width: 782px) {
   .archive.has-sidebar #primary,
@@ -2312,7 +2312,7 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover {
   .search #secondary,
   .page #secondary,
   .single #secondary {
-    // width: calc( 35% - 2rem);
+    width: calc( 35% - 2rem);
   }
 }
 
@@ -2322,7 +2322,7 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover {
   .search #secondary,
   .page #secondary,
   .single #secondary {
-    // width: calc( 35% - 3rem);
+    width: calc( 35% - 3rem);
   }
 }
 
@@ -3067,55 +3067,55 @@ amp-script .cat-links {
   margin: 0.5em 0;
 }
 
-// .entry-content a {
-//   text-decoration: underline;
-// }
+.entry-content a {
+  text-decoration: underline;
+}
 
-// .entry-content a:hover, .entry-content a:active {
-//   color: #3c3c3c;
-//   text-decoration: none;
-// }
+.entry-content a:hover, .entry-content a:active {
+  color: #3c3c3c;
+  text-decoration: none;
+}
 
-// .entry-content h1 a,
-// .entry-content h2 a,
-// .entry-content h3 a,
-// .entry-content h4 a,
-// .entry-content h5 a,
-// .entry-content h6 a {
-//   color: #111;
-//   text-decoration: none;
-// }
+.entry-content h1 a,
+.entry-content h2 a,
+.entry-content h3 a,
+.entry-content h4 a,
+.entry-content h5 a,
+.entry-content h6 a {
+  color: #111;
+  text-decoration: none;
+}
 
-// .entry-content h1 a:visited,
-// .entry-content h2 a:visited,
-// .entry-content h3 a:visited,
-// .entry-content h4 a:visited,
-// .entry-content h5 a:visited,
-// .entry-content h6 a:visited {
-//   color: #111;
-// }
+.entry-content h1 a:visited,
+.entry-content h2 a:visited,
+.entry-content h3 a:visited,
+.entry-content h4 a:visited,
+.entry-content h5 a:visited,
+.entry-content h6 a:visited {
+  color: #111;
+}
 
-// .entry-content > iframe[style] {
-//   margin: 32px 0 !important;
-//   max-width: 100% !important;
-// }
+.entry-content > iframe[style] {
+  margin: 32px 0 !important;
+  max-width: 100% !important;
+}
 
-// .entry-content .page-links a {
-//   margin: calc( 0.5 * 1rem);
-//   text-decoration: none;
-// }
+.entry-content .page-links a {
+  margin: calc( 0.5 * 1rem);
+  text-decoration: none;
+}
 
-// .entry-content .wp-audio-shortcode {
-//   max-width: calc( 100vw - ( 2 * 1rem ));
-// }
+.entry-content .wp-audio-shortcode {
+  max-width: calc( 100vw - ( 2 * 1rem ));
+}
 
-// .entry .entry-content a.button {
-//   text-decoration: none;
-// }
+.entry .entry-content a.button {
+  text-decoration: none;
+}
 
-// .entry .entry-content a.button, .entry .entry-content a.button:hover {
-//   color: #fff;
-// }
+.entry .entry-content a.button, .entry .entry-content a.button:hover {
+  color: #fff;
+}
 
 /* Single Post */
 .single .entry-header {
@@ -3126,32 +3126,32 @@ amp-script .cat-links {
   border-bottom: 1px solid #ddd;
 }
 
-// .single .entry-title {
-//   font-size: 1.8em;
-//   margin: 0 0 0.5em;
-// }
+.single .entry-title {
+  font-size: 1.8em;
+  margin: 0 0 0.5em;
+}
 
-// .single .entry-title--with-subtitle {
-//   margin-bottom: 0.3rem;
-// }
+.single .entry-title--with-subtitle {
+  margin-bottom: 0.3rem;
+}
 
-// @media only screen and (min-width: 600px) {
-//   .single .entry-title {
-//     font-size: 2.2em;
-//   }
-// }
+@media only screen and (min-width: 600px) {
+  .single .entry-title {
+    font-size: 2.2em;
+  }
+}
 
-// @media only screen and (min-width: 782px) {
-//   .single .entry-title {
-//     font-size: 2.8em;
-//   }
-// }
+@media only screen and (min-width: 782px) {
+  .single .entry-title {
+    font-size: 2.8em;
+  }
+}
 
-// @media only screen and (min-width: 1168px) {
-//   .single .entry-title {
-//     font-size: 3.2em;
-//   }
-// }
+@media only screen and (min-width: 1168px) {
+  .single .entry-title {
+    font-size: 3.2em;
+  }
+}
 
 .single .entry-meta {
   margin-bottom: 0.5rem;

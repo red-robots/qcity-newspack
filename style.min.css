@@ -397,7 +397,7 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover{background-color:#111;
 .wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:auto;max-width:90%;width:1200px}
 #page{overflow:hidden;width:100%}
 .site-content{min-height:30vh;margin-top:1.5rem}
-#primary-home{margin:auto;max-width:90%;width:1200px}
+#primary-home{margin:auto;max-width:90%;width:1000px}
 #secondary{margin-top:1rem}
 .hide{display:none}
 .post-template-single-feature .main-content,.page-template-single-feature .main-content,.archive-one-column #main,.newspack-front-page.page-template-single-feature .site-main{margin-left:auto;margin-right:auto;max-width:780px;width:100%}
@@ -3870,6 +3870,14 @@ nav.main-navigation li{font-size:16px}
 .home-content .home-hero{margin:0}
 body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:0}
 body.newspack-front-page .editors-choice{width:100%;max-width:100%;margin-top:0;margin-right:0}
+body.newspack-front-page .cat-links{margin-top:-25px;margin-bottom:15px}
+body.newspack-front-page .cat-links a{padding:2px 5px;background-color:#c4a92f;color:#000}
+body.newspack-front-page .cat-links a:hover{background-color:#924020}
+body.newspack-front-page .wpnbha.has-text-color .cat-links a{color:#000}
+body.newspack-front-page .wpnbha.has-text-color .cat-links a:hover{color:#fff;text-decoration:none}
+.black-section-title{position:relative}
+.black-section-title:after{content:'';width:50px;position:absolute;height:5px;background-color:#c4a92f;bottom:-10px;left:0}
+.editors-choice .wpnbha.columns-2 article{-ms-flex-preferred-size:calc(40% - 16px);flex-basis:calc(40% - 16px)}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}
 .c-sponsor-block__label{position:static}
 .c-sponsor-block__sponsor{font-size:.85rem;margin-top:35px}

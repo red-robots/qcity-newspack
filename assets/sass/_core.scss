@@ -13506,6 +13506,21 @@ body.newspack-front-page {
 		left: 0;
 	}
 }
+h2.center-underline {
+	position: relative;
+	&:after {
+		content: '';
+		width: 50px;
+		position: absolute;
+		height: 5px;
+		background-color: $color-yellow;
+		bottom: -10px;
+		left: 0;
+		right: 0;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
 .editors-choice {
 	.wpnbha.columns-2 article {
 		flex-basis: calc(40% - 16px);
@@ -13524,6 +13539,10 @@ body.home {
 		background-color: #fff;
 		border-radius: 0;
 	}
+}
+.h-sb .site-header .nav3 a {
+	background-color: #fff !important;
+	border-radius: 0 !important;
 }
 button#search-toggle {
 	box-shadow: none;

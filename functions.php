@@ -6,8 +6,9 @@
  *
  * @package Newspack
  */
-add_post_type_support( 'event', 'newspack_blocks' );
+
 add_post_type_support( 'job', 'newspack_blocks' );
+add_post_type_support( 'event', 'newspack_blocks' );
 /**
  * Newspack Theme only works in WordPress 4.7 or later.
  */

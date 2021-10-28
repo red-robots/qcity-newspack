@@ -7,7 +7,7 @@ function js_custom_init() {
         array(
             'post_type' => 'event',
             'menu_name' => 'Events',
-            'plural'    => 'Faculties',
+            'plural'    => 'Events',
             'single'    => 'Event',
             'supports'  => array('title','editor','custom-fields','thumbnail')
         ),

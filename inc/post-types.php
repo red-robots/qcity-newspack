@@ -58,7 +58,7 @@ function js_custom_init() {
             'menu_name' => 'Jobs',
             'plural'    => 'Jobs',
             'single'    => 'Job',
-            'supports'  => array('title','editor')
+            'supports'  => array('title','editor','thumbnail')
         ),
         array(
             'post_type' => 'story',

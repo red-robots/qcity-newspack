@@ -1031,9 +1031,11 @@ a:focus {
 .dd-menu li {
   position: relative;
 }
+
 button.submenu-expand, button.submenu-expand:hover {
   background: none;
   box-shadow: none;
+  display: none;
 }
 .dd-menu .submenu-expand {
   display: inline-block;

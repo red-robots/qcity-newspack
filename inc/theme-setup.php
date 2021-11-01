@@ -35,12 +35,12 @@ function acstarter_setup() {
   add_theme_support( 'post-thumbnails' );
 
   // This theme uses wp_nav_menu() in one location.
-  register_nav_menus( array(
-    'primary' => esc_html__( 'Primary Menu', 'acstarter' ),
-    'burger' => esc_html__( 'Burger Submenu', 'acstarter' ),
-    'footer' => esc_html__( 'Footer Menu', 'acstarter' ),
-    'sitemap' => esc_html__( 'Sitemap', 'acstarter' ),
-  ) );
+  // register_nav_menus( array(
+  //   'primary' => esc_html__( 'Primary Menu', 'acstarter' ),
+  //   'burger' => esc_html__( 'Burger Submenu', 'acstarter' ),
+  //   'footer' => esc_html__( 'Footer Menu', 'acstarter' ),
+  //   'sitemap' => esc_html__( 'Sitemap', 'acstarter' ),
+  // ) );
 
   /*
    * Switch default core markup for search form, comment form, and comments

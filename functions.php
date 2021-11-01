@@ -10,6 +10,9 @@
 add_post_type_support( 'job', 'newspack_blocks' );
 add_post_type_support( 'event', 'newspack_blocks' );
 add_post_type_support( 'sponsor', 'newspack_blocks' );
+
+
+
 /**
  * Newspack Theme only works in WordPress 4.7 or later.
  */
@@ -84,6 +87,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				'tertiary-menu'  => __( 'Tertiary Menu', 'newspack' ),
 				'highlight-menu' => __( 'Topic Highlight Menu', 'newspack' ),
 				'social'         => __( 'Social Links Menu', 'newspack' ),
+				'burger'         => __( 'Burger Menu', 'newspack' ),
 			)
 		);
 
@@ -427,6 +431,19 @@ function newspack_scripts() {
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
 	wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+
+	wp_enqueue_script( 
+			'newspack-blocks', 
+			get_template_directory_uri() . '/assets/js/vendors.js', 
+			array(), '1.2', 
+			true 
+		);
+	wp_enqueue_script( 
+			'newspack-custom', 
+			get_template_directory_uri() . '/assets/js/custom.js', 
+			array(), '1.2', 
+			true 
+		);
 
 	if ( ! newspack_is_amp() ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

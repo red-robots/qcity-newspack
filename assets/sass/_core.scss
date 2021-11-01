@@ -368,189 +368,190 @@ a {
 	}
 }
 
-// .mainnav-wrap {
-// 	width: 100%;
-// 	float: left;
-// 	background-color: $color-black;
-//   padding: 35px 0 35px 0;
-//   @media screen and (min-width: $tabwidth) {
-//     margin: 0;
-//     padding: 0;
-//   }
-// }
-// .menu-main-navigation-container {
-// 	@media screen and (min-width: $tabwidth) {
-// 		width: auto;
-// 		float: right;
-// 	}
-// }
-// .main-navigation {
-// 	clear: both;
-// 	display: block;
-// 	text-align: center;
-// 	width: 100%;
-//   font-family: $font__main;
+.mainnav-wrap {
+	width: 100%;
+	float: left;
+	background-color: $color-black;
+  padding: 35px 0 35px 0;
+  @media screen and (min-width: $tabwidth) {
+    margin: 0 0 20px 0;
+    // margin: 0;
+    padding: 0;
+  }
+}
+.menu-main-navigation-container {
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+		float: right;
+	}
+}
+.main-navigation {
+	clear: both;
+	display: block;
+	text-align: center;
+	width: 100%;
+  font-family: $font__main;
 	
-// 	@media screen and (min-width: $tabwidth) {
-// 		clear: none;
-// 		width: auto;
-// 		float: right;
-//     background-color: $color-black;
-// 	}
-// 	@media screen and (min-width: $deskwidth) {
-// 		text-align: left;
-// 	}
-// 	.menu {
-// 		@include transition(all ease 1s);
-// 		/*overflow: hidden;*/
-// 		display: block;
-// 	}
-// 	&.toggled .menu {
-// 		max-height: 1000px;
-// 	}
-// 	.menu {
-// 		max-height: 0;
-// 		@media screen and (min-width: $tabwidth) {
-// 			max-height: 1000px;
-// 		}
-// 	}
+	@media screen and (min-width: $tabwidth) {
+		clear: none;
+		width: auto;
+		float: right;
+    background-color: $color-black;
+	}
+	@media screen and (min-width: $deskwidth) {
+		text-align: left;
+	}
+	.menu {
+		@include transition(all ease 1s);
+		/*overflow: hidden;*/
+		display: block;
+	}
+	&.toggled .menu {
+		max-height: 1000px;
+	}
+	.menu {
+		max-height: 0;
+		@media screen and (min-width: $tabwidth) {
+			max-height: 1000px;
+		}
+	}
 
-// 	ul {
-// 		display: none;
-// 		list-style: none;
-// 		margin: 0;
-// 		padding-left: 0;
-// 		@media screen and (min-width: $tabwidth) {
-// 			display: flex;
-// 		}
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+		}
 
-// 		ul {
-// 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-// 			float: left;
-// 			position: absolute;
-// 			top: 3.2em;
-// 			left: -999em;
-// 			z-index: 99999;
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 3.2em;
+			left: -999em;
+			z-index: 99999;
 
-// 			ul.sub-menu {
-// 				left: -999em;
-// 				top: 0;
-// 			}
+			ul.sub-menu {
+				left: -999em;
+				top: 0;
+			}
 
-// 			li {
-//         display: block;
-//         background-color: #333;
+			li {
+        display: block;
+        background-color: #333;
 
-//         a{
-//           font-size: 0.8rem;
-//         }
+        a{
+          font-size: 0.8rem;
+        }
 
-// 				&:hover > ul,
-// 				&.focus > ul {
-// 					left: 100%;
-//           background-color: #c4a92f;
-// 				}
-// 				@media screen and (min-width: $tabwidth) {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+          background-color: #c4a92f;
+				}
+				@media screen and (min-width: $tabwidth) {
 		
-// 				}
-// 				@media screen and (min-width: $deskwidth) {
+				}
+				@media screen and (min-width: $deskwidth) {
 					
-// 				}
-// 			}
+				}
+			}
 
 
-// 			a {
-// 				width: 200px;
-// 				@media screen and (min-width: $tabwidth) {
+			a {
+				width: 200px;
+				@media screen and (min-width: $tabwidth) {
 		
-// 				}
-// 				@media screen and (min-width: $deskwidth) {
+				}
+				@media screen and (min-width: $deskwidth) {
 					
-// 				}
-// 			}
+				}
+			}
 
-// 			:hover > a,
-// 			.focus > a {
-// 			}
+			:hover > a,
+			.focus > a {
+			}
 
-// 			a:hover,
-// 			a.focus {
-// 			}
-// 		}
+			a:hover,
+			a.focus {
+			}
+		}
 
-// 		li:hover > ul,
-// 		li.focus > ul {
-// 			left: auto;
-// 		}
-// 	}
-// 	li {
-// 		// float: left;
-// 		position: relative;
-// 		text-align: center;
-// 		display: inline-block;
-// 		hyphens: none;
-// 		padding: 0 ;
-// 		width: 100%;
-// 		@media screen and (min-width: $tabwidth) {
-// 			// border-left: 1px solid #000;
-// 			line-height: 3.2;
-// 			width: auto;
-// 			// padding: 0 20px;
-// 			&:first-of-type {
-// 				border: 0;
-// 			}
-//       .splat {
-//         position: absolute;
-//         display: block;
-//         z-index: 1;
-//         top: 10px;
-//         right: -20px;
-//         width: 20px;
-//         height: 20px;
-//         text-align: center;
-//         vertical-align: middle;
-//         padding: 3px 0 0 0;
-//         box-sizing: border-box;
-//         line-height: 1;
-//         border-radius: 50%;
-//         background-color: red;
-//         color: white;
-//         font-size: 12px;
-//       }
-// 		}
-// 		@media screen and (min-width: $deskwidth) {
-// 			// padding: 0 30px;
-// 		}
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		// float: left;
+		position: relative;
+		text-align: center;
+		display: inline-block;
+		hyphens: none;
+		padding: 0 ;
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			// border-left: 1px solid #000;
+			line-height: 3.2;
+			width: auto;
+			// padding: 0 20px;
+			&:first-of-type {
+				border: 0;
+			}
+      .splat {
+        position: absolute;
+        display: block;
+        z-index: 1;
+        top: 10px;
+        right: -20px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 3px 0 0 0;
+        box-sizing: border-box;
+        line-height: 1;
+        border-radius: 50%;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+      }
+		}
+		@media screen and (min-width: $deskwidth) {
+			// padding: 0 30px;
+		}
 
-// 		&:hover > a,
-// 		&.focus > a {
-// 		}
-// 	}
-// 	a {
-// 		display: block;
-// 		// align-items: center;
-// 		text-decoration: none;
-// 		padding: 10px 0px;
-// 		color: #fff;
-// 		@include transition(all ease .4s);
-// 		@media screen and (min-width: $tabwidth) {
-// 			padding: 0 16px;
-// 		}
-// 		@media screen and (min-width: $deskwidth) {
-// 			padding: 0 20px;
-// 		}
-// 		&:hover, &.active {
-// 			background-color: rgba($color-yellow, 1);
-// 			color: #fff;
-// 		}
-// 	}
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		// align-items: center;
+		text-decoration: none;
+		padding: 10px 0px;
+		color: #fff;
+		@include transition(all ease .4s);
+		@media screen and (min-width: $tabwidth) {
+			padding: 0 16px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding: 0 20px;
+		}
+		&:hover, &.active {
+			background-color: rgba($color-yellow, 1);
+			color: #fff;
+		}
+	}
 
-// 	.current_page_item > a,
-// 	.current-menu-item > a,
-// 	.current_page_ancestor > a,
-// 	.current-menu-ancestor > a {
-// 	}
-// }
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
 
 /* Small menu. */
 .menu-toggle,
@@ -1141,7 +1142,7 @@ body.category {
 	
 }
 #content {
-	margin-top: 5px;
+	// margin-top: 5px;
 	width: 100%;
 	float: left;
 	clear: both;
@@ -1149,7 +1150,7 @@ body.category {
 		// margin-top: 18px;
 	}
 	@media screen and (min-width: $deskwidth) {
-
+		margin-top: 120px;
 	}
 }
 .content-area-single {
@@ -13444,7 +13445,8 @@ nav.main-navigation {
 body.newspack-front-page {
 	.site-content,
 	#content {
-		margin-top: 0;
+		// margin-top: 0;
+		margin-top: 120px;
 	}
 	.editors-choice {
 		width: 100%;
@@ -13550,4 +13552,9 @@ button#search-toggle {
 }
 form.search-form, #header-search, button.search-submit {
 	border: 0;
+}
+.qc-custom-events {
+	.entry-wrapper {
+		padding: 8px;
+	}
 }

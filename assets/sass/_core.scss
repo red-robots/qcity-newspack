@@ -13442,12 +13442,22 @@ nav.main-navigation {
 	.home-hero {
 		margin: 0 0 0 0;
 		padding: 20px !important;
+		display: flex;
+		flex-direction: column;
+		& > .a-col { order: 2; }
+		& > .b-col  { order: 1; }
+		& > .c-col  { order: 3; }
 		@media screen and (min-width: $tabwidth) {
 			padding: 40px !important;
+			flex-direction: row;
+			& > .a-col { order: 1; }
+			& > .b-col  { order: 2; }
+			& > .c-col  { order: 3; }
 		}
 		@media screen and (min-width: $deskwidth) {
 			padding: 40px !important;
 		}
+		
 	}
 }
 .wp-block-columns {

@@ -3882,7 +3882,10 @@ body.single-post .entry-content.entry-content-v2 div[data-google-query-id] div,b
 body.single-post .content-single-page .gform_footer input.gform_button,#primary.single-post-newlayout .content-single-page .gform_footer input.gform_button{height:35px;top:0;padding:11px 15px 10px !important}
 .content-area-center{width:100%;margin:0 auto;overflow:hidden}
 nav.main-navigation li{font-size:16px}
-.home-content .home-hero{margin:0;padding:20px !important}
+.home-content .home-hero{margin:0;padding:20px !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.home-content .home-hero>.a-col{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
+.home-content .home-hero>.b-col{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
+.home-content .home-hero>.c-col{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 .wp-block-columns{padding:0 20px}
 body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:20px}
 body.newspack-front-page .editors-choice{width:100%;max-width:100%;margin-top:0;margin-right:0}
@@ -4072,7 +4075,10 @@ ul.rp4wp-posts-list .rp4wp-col-last{width:99% !important;padding-right:0 !import
 .comments-section .comments-trigger .text-holder{display:inline-block}
 .comments-section .comments-trigger .text-holder .click_class{cursor:pointer;font-weight:bold;text-decoration:underline}
 .content-area-center{width:68%;float:none;padding-bottom:50px;min-height:800px}
-.home-content .home-hero{padding:40px !important}
+.home-content .home-hero{padding:40px !important;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.home-content .home-hero>.a-col{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
+.home-content .home-hero>.b-col{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
+.home-content .home-hero>.c-col{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 .wp-block-columns{padding:0}
 body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:120px}
 .job-board .wpnbha.is-style-borders article{border:solid #fff}

@@ -1136,7 +1136,7 @@ body.category {
 	}
 	#content {
 		@media screen and (min-width: $tabwidth) {
-			margin-top: 40px;
+			margin-top: 140px;
 		}
 	}
 	
@@ -12047,6 +12047,7 @@ body.logged-in.admin-bar.page-template-page-business-directory #content {
 		text-align: center;
 		padding: 30px 0;
 		position: relative;
+		width: 100%;
 		h1 {
 			color: $color-red;
 			font-size: 30px;
@@ -13440,13 +13441,35 @@ nav.main-navigation {
 .home-content {
 	.home-hero {
 		margin: 0 0 0 0;
+		padding: 20px !important;
+		@media screen and (min-width: $tabwidth) {
+			padding: 40px !important;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding: 40px !important;
+		}
+	}
+}
+.wp-block-columns {
+	padding: 0 20px;
+	@media screen and (min-width: $tabwidth) {
+		padding: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
 	}
 }
 body.newspack-front-page {
 	.site-content,
 	#content {
 		// margin-top: 0;
-		margin-top: 120px;
+		margin-top: 20px;
+		@media screen and (min-width: $tabwidth) {
+			margin-top: 120px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			margin-top: 120px;
+		}
 	}
 	.editors-choice {
 		width: 100%;
@@ -13557,9 +13580,41 @@ form.search-form, #header-search, button.search-submit {
 	.entry-wrapper {
 		padding: 8px;
 	}
+	img {
+		transition: all, ease, .2s ;
+		opacity: 1;
+		// transition-property: opacity;
+  // transition-duration: 4s;
+  // transition-delay: 2s;
+		&:hover {
+			opacity: .2;
+		}
+	}
 }
 .job-board {
 	.wpnbha.is-style-borders article {
-		border: solid #fff;
+		@media screen and (min-width: $tabwidth) {
+			border: solid #fff;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+}
+.newspack-signup {
+	.wp-block-columns {
+		padding: 20px;
+		text-align: center;
+	}
+	@media screen and (min-width: $tabwidth) {
+		text-align: left;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.sponsor-column {
+	.wp-block-column {
+		flex-basis: 45% !important;
 	}
 }

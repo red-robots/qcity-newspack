@@ -13,6 +13,7 @@ jQuery(document).ready(function ($) {
         var target = $(this);
         var txt = $(this).text().replace(/\s+/g, " ").trim();
         if(txt=='Jobs') {
+            // alert(typeof jobsCount);
             if(typeof jobsCount!="undefined" && jobsCount!=null) {
                 var countTxt = '<span class="menu-counter menu-badge">'+jobsCount+'</span>';
                 target.append(countTxt);

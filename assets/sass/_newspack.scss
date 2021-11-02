@@ -799,21 +799,21 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'],
 .wp-block-search__button-outside .wp-block-search__button {
-  transition: background 150ms ease-in-out;
-  background: #555;
-  border: none;
-  border-radius: 5px;
-  box-sizing: border-box;
-  display: inline-block;
-  color: #fff;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.8em;
-  font-weight: 700;
-  line-height: 1.2;
-  outline: none;
-  padding: 0.76rem 1rem;
-  text-decoration: none;
-  vertical-align: bottom;
+  // transition: background 150ms ease-in-out;
+  // background: #555;
+  // border: none;
+  // border-radius: 5px;
+  // box-sizing: border-box;
+  // display: inline-block;
+  // color: #fff;
+  // font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  // font-size: 0.8em;
+  // font-weight: 700;
+  // line-height: 1.2;
+  // outline: none;
+  // padding: 0.76rem 1rem;
+  // text-decoration: none;
+  // vertical-align: bottom;
 }
 
 .button:hover, .button:hover:visited,
@@ -2271,7 +2271,7 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover {
 // changed
 #primary-home {
   margin: auto;
-  max-width: 90%;
+  max-width: 100%;
   width: 1000px;
   // width: 1200px;
 }

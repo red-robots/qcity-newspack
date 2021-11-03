@@ -13590,16 +13590,19 @@ form.search-form, #header-search, button.search-submit {
 	.entry-wrapper {
 		padding: 8px;
 	}
-	img {
-		transition: all, ease, .2s ;
-		opacity: 1;
-		// transition-property: opacity;
-  // transition-duration: 4s;
-  // transition-delay: 2s;
-		&:hover {
-			opacity: .2;
+	article.type-event {
+		img {
+			transition: all, ease, .2s ;
+			opacity: 1;
+			// transition-property: opacity;
+	  // transition-duration: 4s;
+	  // transition-delay: 2s;
+			&:hover {
+				opacity: .2;
+			}
 		}
 	}
+	
 }
 .job-board {
 	.wpnbha.is-style-borders article {

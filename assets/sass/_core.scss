@@ -13597,9 +13597,10 @@ form.search-form, #header-search, button.search-submit {
 			// transition-property: opacity;
 	  // transition-duration: 4s;
 	  // transition-delay: 2s;
-			&:hover {
-				opacity: .2;
-			}
+			
+		}
+		&:hover {
+			img {opacity: .2;}
 		}
 	}
 	

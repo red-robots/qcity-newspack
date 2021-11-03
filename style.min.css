@@ -3910,7 +3910,7 @@ button#search-toggle{-webkit-box-shadow:none;box-shadow:none;border:0}
 form.search-form,#header-search,button.search-submit{border:0}
 .qc-custom-events .entry-wrapper{padding:8px}
 .qc-custom-events article.type-event img{-webkit-transition:all,ease,.2s;transition:all,ease,.2s;opacity:1}
-.qc-custom-events article.type-event img:hover{opacity:.2}
+.qc-custom-events article.type-event:hover img{opacity:.2}
 .newspack-signup .wp-block-columns{padding:20px;text-align:center}
 .sponsor-column .wp-block-column{-ms-flex-preferred-size:45% !important;flex-basis:45% !important}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}

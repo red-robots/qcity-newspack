@@ -72,7 +72,7 @@
                     'theme_location' => 'primary-menu', 
                     // 'theme_location' => 'primary', 
                     'menu_id' => 'primary-menu', 
-                    'menu_class'=>'desktop-version',
+                    'menu_class'=>'desktop-version nav1 dd-menu',
                     'echo' => true,
                     'items_wrap' => '<ul id="primary-menu" class="with-custom-link %2$s">%3$s'.$customMenuLink.'</ul>'
                   )

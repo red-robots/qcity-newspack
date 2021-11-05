@@ -28,7 +28,13 @@ get_header();
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						<div class="company-logo">
 							<?php $image = get_field('image');
-							$company_name = get_field("company_name");?>
+							$company_name = get_field("company_name");
+							if( $company_name == '' ) {
+ 								$company_name = get_the_excerpt();
+							}
+
+
+							?>
 						</div>
 					</header><!-- .entry-header -->
 

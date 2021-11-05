@@ -2,6 +2,9 @@
     $img            = get_field('image');
     $jobTitle       = get_field("job_title");
     $companyName    = get_field("company_name");
+    if( $companyName == '' ) {
+        $companyName = get_the_excerpt();
+    }
 ?>
 
 <div class="job">

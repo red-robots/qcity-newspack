@@ -992,6 +992,28 @@ a:focus {
 ## Menus
 --------------------------------------------------------------*/
 /** === Dropdown menus === */
+.main-navigation ul.dd-menu {
+  li.last {margin-right: 20px;}
+  .sub-menu {
+    padding-top: 12px;
+    &:before {
+       border-style: solid;
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent #333 transparent;
+        content: '';
+        display: inline-block;
+        height: 0;
+        left: 10px;
+        position: absolute;
+        top: 4px;
+        width: 0;
+
+    }
+    li {
+      
+    }
+  } 
+}
 .dd-menu button {
   display: inline-block;
   border: none;
@@ -1039,6 +1061,10 @@ button.submenu-expand, button.submenu-expand:hover {
 }
 .dd-menu .submenu-expand {
   display: inline-block;
+  color: #fff;
+  right: -5px;
+  top: 14px;
+  position: absolute;
 }
 
 .dd-menu .sub-menu > li {
@@ -2286,6 +2312,12 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .new-membership-page #main {
+    display: block !important;
+    .logo {
+      left: -0px;
+    }
   }
 }
 

@@ -1119,7 +1119,14 @@ body.single .site-footer .qcwrapper {
 body.single {
 	.qcwrapper {
 		@media screen and (min-width: $deskwidth) {
-			max-width: 990px;
+			max-width: 1090px;
+		}
+		.button {
+			width: auto;
+			display: inline-block;
+			a {
+				padding: 5px 15px;
+			}
 		}
 	}
 	#content,
@@ -13558,7 +13565,10 @@ h2.center-underline {
 }
 .editors-choice {
 	.wpnbha.columns-2 article {
-		flex-basis: calc(40% - 16px);
+		flex-basis: calc(90% - 16px);
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: calc(40% - 16px);
+		}
 	}
 }
 // For aligning the full width black sections with the non full width content
@@ -13608,8 +13618,9 @@ form.search-form, #header-search, button.search-submit {
 }
 .job-board {
 	.wpnbha.is-style-borders article {
+		border-bottom: solid #fff;
 		@media screen and (min-width: $tabwidth) {
-			border: solid #fff;
+			border-right: solid #fff;
 		}
 		@media screen and (min-width: $deskwidth) {
 			
@@ -13631,5 +13642,19 @@ form.search-form, #header-search, button.search-submit {
 .sponsor-column {
 	.wp-block-column {
 		flex-basis: 45% !important;
+	}
+	figure.wp-block-image {
+		padding: 20px;
+		@media screen and (min-width: $tabwidth) {
+			padding: 5px;
+		}
+	}
+}
+.new-chapter {
+	figure {
+		padding: 50px;
+		@media screen and (min-width: $tabwidth) {
+			padding: 10px;
+		}
 	}
 }

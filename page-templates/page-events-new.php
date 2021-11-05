@@ -186,6 +186,9 @@ $today = date('Ym') . $day_plus;
 																	$date_start 	= strtotime($date->format('Y-m-d'));
 																	$date_stop 		= strtotime($enddate->format('Y-m-d'));
 																	$now 			= strtotime(date('Y-m-d'));
+																	if( $date == '' ) {
+																		$date = get_the_excerpt();
+																	}
 																	include( locate_template('template-parts/sponsored-block.php') );
 																endwhile; ?>
 														</section>
@@ -276,6 +279,9 @@ $today = date('Ym') . $day_plus;
 																			$date_start 	= strtotime($date->format('Y-m-d'));
 																			$date_stop 		= strtotime($enddate->format('Y-m-d'));
 																			$now 			= strtotime(date('Y-m-d'));
+																			if( $date == '' ) {
+																				$date = get_the_excerpt();
+																			}
 																			include( locate_template('template-parts/sponsored-block.php') );
 																		endwhile; ?>
 																</section>
@@ -363,6 +369,9 @@ $today = date('Ym') . $day_plus;
 													$date_start 	= strtotime($date->format('Y-m-d'));
 													$date_stop 		= strtotime($enddate->format('Y-m-d')); 
 													$postID[] = get_the_ID();
+													if( $date == '' ) {
+														$date = get_the_excerpt();
+													}
 													include( locate_template('template-parts/sponsored-block.php') );
 												endwhile; ?>
 											</section>
@@ -423,6 +432,9 @@ $today = date('Ym') . $day_plus;
 																			$date_start 	= strtotime($date->format('Y-m-d'));
 																			$date_stop 		= strtotime($enddate->format('Y-m-d'));
 																			$now 			= strtotime(date('Y-m-d'));
+																			if( $date == '' ) {
+																				$date = get_the_excerpt();
+																			}
 																			include( locate_template('template-parts/sponsored-block.php') );
 																		endwhile; ?>
 																</section>

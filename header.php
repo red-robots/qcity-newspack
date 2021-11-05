@@ -103,7 +103,7 @@ if( is_page() ) {
     $is_member_page = true;
   }
 }
-
+// echo $is_member_page;
 ?>
 
 <body <?php body_class($bodyClass); ?> data-today="<?php echo date('Ymd') ?>" data-dates="<?php echo $start_end ?>" data-range="<?php echo $dateRange ?>">
@@ -124,6 +124,8 @@ if ( ! is_active_sidebar( 'header-1' ) ) {
 	$show_slideout_sidebar = false;
 }
 
+// include(locate_template('template-parts/header/mobile.php'));
+// include(locate_template('template-parts/header/desktop.php'));
 get_template_part( 'template-parts/header/mobile', 'sidebar' );
 get_template_part( 'template-parts/header/desktop', 'sidebar' );
 
@@ -134,7 +136,7 @@ endif;
 
 <div id="page" class="site">
 	
-	<?php //get_template_part('parts/header-newspack'); ?>
-	<?php get_template_part('parts/header-qcity'); ?>
+	<?php //include(locate_template('parts/header-newspack.php'));?>
+	<?php include(locate_template('parts/header-qcity.php'));?>
 
 	<div id="content" class="site-content">

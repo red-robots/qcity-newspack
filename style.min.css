@@ -2316,9 +2316,11 @@ body.single #content,body.single #primary{position:relative;z-index:2}
 .content-area-title{width:100%;margin:0 auto}
 .content-area{width:100%;margin:0 auto}
 .widget-area{width:100%;margin:0 auto;clear:both}
-section.red-band{width:100%;float:left;position:relative;margin:20px 0 4px 0;background-color:#924020;padding:2px 0;text-align:right;color:#fff;font-size:13px;display:none}
+section.red-band{width:100%;float:left;position:relative;margin:20px 0 4px 0;background-color:#924020;padding:4px 0;text-align:right;color:#fff;font-size:13px;display:none}
 section.red-band a{display:inline-block;padding:6px 5px 2px;color:#fff;-webkit-transition:all ease .2s;transition:all ease .2s;text-decoration:none}
 section.red-band a:hover{background-color:#fff;color:#924020}
+section.red-band a.topSubscribeBtn{background-color:red;color:#fff;border:1px solid #fff;padding-bottom:5px}
+section.red-band a.topSubscribeBtn:hover{color:#fff}
 section.red-band .qcwrapper{line-height:1.2}
 .side-offer{width:100%;text-align:center;padding:30px 20px;background-color:#924020;margin-bottom:40px;color:#fff}
 .side-offer h3{font-size:18px;margin-bottom:15px}

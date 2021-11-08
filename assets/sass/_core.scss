@@ -1225,7 +1225,7 @@ section.red-band {
 	position: relative;
 	margin: 20px 0 4px 0;
 	background-color: $color-red;
-	padding: 2px 0;
+	padding: 4px 0;
 	text-align: right;
 	color: #fff;
 	font-size: 13px;
@@ -1242,6 +1242,15 @@ section.red-band {
 		&:hover {
 			background-color: #fff;
 			color: $color-red;
+		}
+	}
+	a.topSubscribeBtn {
+		background-color: #FF0000;
+		color: #fff;
+		border: 1px solid #fff;
+		padding-bottom: 5px;
+		&:hover {
+			color: #fff;
 		}
 	}
 	.qcwrapper {

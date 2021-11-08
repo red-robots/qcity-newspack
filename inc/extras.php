@@ -52,6 +52,12 @@ function search_filter_business($query) {
 add_action( 'pre_get_posts', 'search_filter_business' );
 
 
+add_action( 'init', 'wpse325327_add_excerpts_to_pages' );
+function wpse325327_add_excerpts_to_pages() {
+    add_post_type_support( 'job', 'excerpt' );
+}
+
+
 function email_obfuscator($string) {
     $output = '';
     if($string) {

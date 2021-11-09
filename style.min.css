@@ -3921,7 +3921,9 @@ form.search-form,#header-search,button.search-submit{border:0}
 .qc-custom-events article.type-event:hover img{opacity:.2}
 .job-board .wpnbha.is-style-borders article{border-bottom:solid #fff}
 .newspack-signup .wp-block-columns{padding:20px;text-align:center}
-.sponsor-column .wp-block-column{-ms-flex-preferred-size:45% !important;flex-basis:45% !important}
+.sponsor-column .wp-block-columns{-ms-flex-pack:distribute;justify-content:space-around}
+.sponsor-column .wp-block-column{-ms-flex-preferred-size:45% !important;flex-basis:45% !important;-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}
+.sponsor-column .wp-block-column:last-child{margin:0 auto}
 .sponsor-column figure.wp-block-image{padding:20px}
 .new-chapter figure{padding:50px}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}

@@ -13649,8 +13649,17 @@ form.search-form, #header-search, button.search-submit {
 	}
 }
 .sponsor-column {
+	.wp-block-columns {
+		justify-content: space-around;
+		// align-items: center;
+		// align-content: center;
+	}
 	.wp-block-column {
 		flex-basis: 45% !important;
+		flex-grow: 0;
+		&:last-child {
+			margin: 0 auto;
+		}
 	}
 	figure.wp-block-image {
 		padding: 20px;

@@ -9,7 +9,7 @@ function js_custom_init() {
             'menu_name' => 'Events',
             'plural'    => 'Events',
             'single'    => 'Event',
-            'supports'  => array('title','editor','custom-fields','thumbnail')
+            'supports'  => array('title','editor','custom-fields','thumbnail', 'excerpt')
         ),
         array(
             'post_type' => 'business_listing',
@@ -58,7 +58,7 @@ function js_custom_init() {
             'menu_name' => 'Jobs',
             'plural'    => 'Jobs',
             'single'    => 'Job',
-            'supports'  => array('title','editor','thumbnail')
+            'supports'  => array('title','editor','thumbnail', 'excerpt')
         ),
         array(
             'post_type' => 'story',

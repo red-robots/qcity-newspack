@@ -65,7 +65,7 @@ function js_custom_init() {
             'menu_name' => 'Stories',
             'plural'    => 'Stories',
             'single'    => 'Story',
-            'supports'  => array('title','editor','comments','comments')
+            'supports'  => array('title','editor','comments','comments','thumbnail', 'excerpt')
         ),
     );
     

@@ -10,6 +10,7 @@
 add_post_type_support( 'job', 'newspack_blocks' );
 add_post_type_support( 'event', 'newspack_blocks' );
 add_post_type_support( 'sponsor', 'newspack_blocks' );
+add_post_type_support( 'story', 'newspack_blocks' );
 
 
 

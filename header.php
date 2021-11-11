@@ -126,8 +126,8 @@ if ( ! is_active_sidebar( 'header-1' ) ) {
 
 // include(locate_template('template-parts/header/mobile.php'));
 // include(locate_template('template-parts/header/desktop.php'));
-get_template_part( 'template-parts/header/mobile', 'sidebar' );
-get_template_part( 'template-parts/header/desktop', 'sidebar' );
+// get_template_part( 'template-parts/header/mobile', 'sidebar' );
+// get_template_part( 'template-parts/header/desktop', 'sidebar' );
 
 if ( true === $header_sub_simplified && ! is_front_page() ) :
 	get_template_part( 'template-parts/header/subpage', 'sidebar' );

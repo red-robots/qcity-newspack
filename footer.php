@@ -12,7 +12,11 @@ $facebook = get_field('facebook_link', 'option');
 $instagram = get_field('instagram_link', 'option');
 $twitter = get_field('twitter_link', 'option');
 ?>
-
+<?php if ( is_active_sidebar( 'footer-3' ) ) { ?>
+    <div id="above-footer">
+        <?php dynamic_sidebar('footer-3'); ?>
+    </div>
+<?php } ?>
     </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -83,7 +87,7 @@ get_template_part('template-parts/popups');
 get_template_part('template-parts/signup-mobile-version');
 wp_footer(); 
 ?>
-
+<script type='text/javascript' src='<?php bloginfo('url'); ?>/wp-content/themes/qcity-newspack/assets/js/custom.js?ver=1.2' id='newspack-custom-js'></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

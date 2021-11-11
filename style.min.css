@@ -2929,7 +2929,7 @@ section.red-band{padding-right:30px}
 .story-block .story-home-right{display:block;background:0;height:unset}
 .story-block.v2 .story-image{width:100%;float:left}
 .story-block.v2 .storyText{width:100%;float:left;padding:10px}
-.mobile-stick{position:fixed !important;display:block;width:100%;z-index:10009;top:0;background-color:white}
+.mobile-stick{display:block;width:100%;z-index:10009;top:0;background-color:white}
 .mobile-body{display:block;padding-top:100px}
 .single-page h1,.single-page h2{margin-bottom:20px}
 body.page-template-page-media .qcwrapper{max-width:1050px}
@@ -3391,7 +3391,7 @@ body.modal-open{overflow-x:hidden;overflow-y:hidden}
 .showOnMobile{display:none}
 .button-more-div .more{text-align:center}
 .button-more-div .more a{display:inline-block;max-width:273px;width:100%;padding:10px 0 8px}
-.site-header{position:relative;z-index:9999999}
+.site-header{position:sticky !important;z-index:9999999;top:0;background-color:#fff}
 #wpadminbar{z-index:9999999}
 body.single .post-subscription-form{width:100%;float:left}
 body.single .post-subscription-form .qcwrapper{max-width:580px;width:100%;padding-left:20px;padding-right:20px;margin:0 auto}
@@ -3894,7 +3894,7 @@ nav.main-navigation li{font-size:16px}
 .home-content .home-hero>.b-col{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
 .home-content .home-hero>.c-col{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 .wp-block-columns{padding:0 20px}
-body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:20px}
+body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:10px}
 body.newspack-front-page .editors-choice{width:100%;max-width:100%;margin-top:0;margin-right:0}
 body.newspack-front-page .cat-links{margin-top:-25px;margin-bottom:15px}
 body.newspack-front-page .cat-links a{padding:2px 5px;background-color:#000;color:#fff}
@@ -3915,6 +3915,7 @@ body.home .h-sb .site-header .nav3 a{background-color:#fff;border-radius:0}
 .h-sb .site-header .nav3 a{background-color:#fff !important;border-radius:0 !important}
 button#search-toggle{-webkit-box-shadow:none;box-shadow:none;border:0}
 form.search-form,#header-search,button.search-submit{border:0}
+.qc-custom-events{padding:20px}
 .qc-custom-events .entry-wrapper{padding:8px}
 .qc-custom-events article.type-event{background-color:#000}
 .qc-custom-events article.type-event img{-webkit-transition:all,ease,.2s;transition:all,ease,.2s;opacity:1}
@@ -3928,11 +3929,14 @@ form.search-form,#header-search,button.search-submit{border:0}
 .sponsor-column .wp-block-column:last-child{margin:0 auto}
 .sponsor-column figure.wp-block-image{padding:20px}
 .new-chapter figure{padding:50px}
+p#wp-block-jetpack-mailchimp_consent-text{display:none}
+.ortho-caro,.ortho-caro.has-background{padding-left:20px !important;padding-right:20px !important}
+#above-footer{width:100%;text-align:center;padding:30px 0}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}
 .c-sponsor-block__label{position:static}
 .c-sponsor-block__sponsor{font-size:.85rem;margin-top:35px}
 }@media(min-width:52.8125em){.c-sponsor-block__main{padding:0 .92rem 0 1.5rem}
-}@media screen and (min-width:320px) and (max-width:640px){.site .site-header{position:fixed !important;display:block;width:100%;z-index:10009;top:0}
+}@media screen and (min-width:320px) and (max-width:640px){.site .site-header{position:sticky !important;display:block;width:100%;z-index:10009;top:0}
 .single-article-bottom{padding:0 20px}
 .footer-content-list{min-height:auto !important;margin-bottom:20px}
 }@media only screen and (min-width:600px){.custom-logo-link{margin-right:.5rem}
@@ -4095,12 +4099,13 @@ ul.rp4wp-posts-list .rp4wp-col-last{width:99% !important;padding-right:0 !import
 .home-content .home-hero>.b-col{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
 .home-content .home-hero>.c-col{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 .wp-block-columns{padding:0}
-body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:120px}
 .editors-choice .wpnbha.columns-2 article{-ms-flex-preferred-size:calc(40% - 16px);flex-basis:calc(40% - 16px)}
+.qc-custom-events{padding:0}
 .job-board .wpnbha.is-style-borders article{border-right:solid #fff}
 .newspack-signup{text-align:left}
 .sponsor-column figure.wp-block-image{padding:5px}
 .new-chapter figure{padding:10px}
+.ortho-caro,.ortho-caro.has-background{padding-left:30px !important;padding-right:30px !important}
 }@media screen and (min-width:768px) and (max-width:1249px){section.home-bottom .jobs,section.home-bottom .biz-dir{margin-right:15px}
 }@media only screen and (min-width:782px){.page-title{font-size:20px}
 .entry-title{-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}
@@ -4445,7 +4450,7 @@ header.biz h1{font-size:28px}
 article.big-post h3{font-size:26px}
 article.big-post .info .desc{margin-bottom:1.5em;height:38px}
 .home-content .home-hero{padding:40px !important}
-body.newspack-front-page .site-content,body.newspack-front-page #content{margin-top:120px}
+.ortho-caro,.ortho-caro.has-background{padding-left:50px !important;padding-right:50px !important}
 }@media(min-width:1300px){section.stickies-new.stickyPostsTop .stickLeft .big-post .info.absolute{position:absolute;bottom:0;left:0;z-index:8}
 }@media only screen and (min-width:1379px){.wp-block-audio.alignleft audio,.wp-block-audio.alignright audio{max-width:385.44px}
 }@media screen and (max-width:1250px){.content-area{width:68%;float:left;margin:0;padding-bottom:50px;min-height:800px;margin-top:25px}
@@ -4675,7 +4680,8 @@ section.home-bottom .ad{width:100%;padding-left:0}
 #mc_embed_signup{width:100% !important}
 .mobile-view{padding:0 20px}
 .mobile-body{display:block;padding-top:100px;overflow:auto}
-.site .site-header .mobile-stick{position:fixed !important;display:block;width:100%;z-index:10009;top:0}
+.site .site-header{position:sticky !important}
+.site .site-header .mobile-stick{display:block;width:100%;z-index:10009;top:0}
 .next-story-block{display:block}
 .next-story-block .photo{width:30%;display:inline-block;vertical-align:top;margin-right:3px;margin-top:3px}
 .next-story-block .desc{display:inline-block;width:65%}

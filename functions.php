@@ -439,12 +439,12 @@ function newspack_scripts() {
 			array(), '1.2', 
 			true 
 		);
-	wp_enqueue_script( 
-			'newspack-custom', 
-			get_template_directory_uri() . '/assets/js/custom.js', 
-			array(), '1.2', 
-			true 
-		);
+	// wp_enqueue_script( 
+	// 		'newspack-custom', 
+	// 		get_template_directory_uri() . '/assets/js/custom.js', 
+	// 		array(), '1.2', 
+	// 		true 
+	// 	);
 
 	if ( ! newspack_is_amp() ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

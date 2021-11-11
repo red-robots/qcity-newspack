@@ -6002,12 +6002,16 @@ section.red-band {
 }
 
 .mobile-stick{
-		position: fixed !important;
+		// position: sticky !important;
 		display: block;
 		width: 100%;
     	z-index: 10009;
     	top: 0;
     	background-color: white;
+    	&.stickit {
+    		// position: fixed !important;
+    		// position: sticky !important;
+    	}
 }
 
 .mobile-body{
@@ -6232,8 +6236,9 @@ body.author{
 
 	.site{
 		.site-header{
+			position: sticky !important;
 			.mobile-stick{
-				position: fixed !important;
+				// position: fixed !important;
 				display: block;
 				width: 100%;
 		    	z-index: 10009;
@@ -7059,8 +7064,8 @@ body.page-template-page-membership {
 @media screen and (min-width:320px) and (max-width:640px) {
 	.site{
 		.site-header{
-			
-				position: fixed !important;
+				position: sticky !important;
+				// position: fixed !important;
 				display: block;
 				width: 100%;
 		    	z-index: 10009;
@@ -9894,8 +9899,11 @@ body.modal-open {
 	}
 }
 .site-header  {
-	position: relative;
+	// position: relative;
+	position: sticky !important;
 	z-index: 9999999;
+	top: 0;
+	background-color: #fff;
 }
 #wpadminbar {z-index: 9999999;}
 @media screen and (max-width: 782px) {
@@ -13489,12 +13497,12 @@ body.newspack-front-page {
 	.site-content,
 	#content {
 		// margin-top: 0;
-		margin-top: 20px;
+		margin-top: 10px;
 		@media screen and (min-width: $tabwidth) {
-			margin-top: 120px;
+			// margin-top: 120px;
 		}
 		@media screen and (min-width: $deskwidth) {
-			margin-top: 120px;
+			// margin-top: 120px;
 		}
 	}
 	.editors-choice {
@@ -13606,6 +13614,10 @@ form.search-form, #header-search, button.search-submit {
 	border: 0;
 }
 .qc-custom-events {
+	padding: 20px;
+	@media screen and (min-width: $tabwidth) {
+		padding: 0;
+	}
 	.entry-wrapper {
 		padding: 8px;
 	}
@@ -13683,4 +13695,24 @@ form.search-form, #header-search, button.search-submit {
 			padding: 10px;
 		}
 	}
+}
+p#wp-block-jetpack-mailchimp_consent-text {
+	display: none;
+}
+.ortho-caro, .ortho-caro.has-background {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	@media screen and (min-width: $tabwidth) {
+		padding-left: 30px !important;
+		padding-right: 30px !important;
+	}
+	@media screen and (min-width: $deskwidth) {
+		padding-left: 50px !important;
+		padding-right: 50px !important;
+	}
+}
+#above-footer {
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
 }

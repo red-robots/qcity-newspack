@@ -199,6 +199,14 @@ function ii_custom_taxonomies() {
                 'single'    => 'Level',
                 'taxonomy'  => 'level',
                 'slug'      => array('slug' => 'level', 'with_front' => false)
+            ),
+            array(
+                'post_type' => 'event',
+                'menu_name' => 'Tags',
+                'plural'    => 'Tags',
+                'single'    => 'Tag',
+                'taxonomy'  => 'event_tag',
+                'slug'      => array('slug' => 'event-tag', 'with_front' => false)
             )
         );
     

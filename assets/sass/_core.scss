@@ -13640,6 +13640,14 @@ form.search-form, #header-search, button.search-submit {
 	.wp-block-columns {
 		padding: 20px;
 		text-align: center;
+		.wp-block-column:last-child {
+			color: #fff;
+			button {
+				&:hover {
+					box-shadow: none;
+				}
+			}
+		}
 	}
 	@media screen and (min-width: $tabwidth) {
 		text-align: left;

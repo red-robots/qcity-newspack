@@ -17,6 +17,8 @@ $twitter = get_field('twitter_link', 'option');
         <?php dynamic_sidebar('footer-3'); ?>
     </div>
 <?php } ?>
+<?php do_action( 'before_footer' ); ?>
+
     </div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

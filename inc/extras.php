@@ -311,76 +311,74 @@ function have_content( $term_id )
 */
 
 
-add_filter('the_content', 'qcity_add_incontent_ad');
-function qcity_add_incontent_ad( $content )
-{   
-    $hide_ads = (defined('HIDE_ADS') && HIDE_ADS ) ? true : false;
+// add_filter('the_content', 'qcity_add_incontent_ad');
+// function qcity_add_incontent_ad( $content )
+// {   
+//     $hide_ads = (defined('HIDE_ADS') && HIDE_ADS ) ? true : false;
 
-    if( is_single() && ( get_post_type() === 'post' ) && !$hide_ads ){
-        $content_block  = explode('<p>',$content);
-        // changed after renaming the ads...
-        $ads_6th        = get_ads_script('event-zone-1');
-        $ads_12th       = get_ads_script('health-zone-1');
-        // $ads_6th        = get_ads_script('single-article-after-6th-paragraph');
-        // $ads_12th       = get_ads_script('single-article-after-12th-paragraph');
-        if( !empty($content_block[7]) && $ads_6th)
-        {               
-            $content_block[7] .= '</div>
-                            <div class="brown-bar b7"><div class="qcity-ads-label '.$hide_ads.'">'. $ads_6th['ads_label'] .' <a href="'. $ads_6th['ads_link_url'] .'">'. $ads_6th['ads_link_text'] .'</a> </div>'. $ads_6th['ad_script'] .'</div>
-                            <div class="content-single-page">';
-        }
-        if( !empty($content_block[13]) && $ads_12th)
-        {               
-            $content_block[13] .= '</div>
-                            <div class="brown-bar b13"><div class="qcity-ads-label '.$hide_ads.'">'. $ads_12th['ads_label'] .' <a href="'. $ads_12th['ads_link_url'] .'">'. $ads_12th['ads_link_text'] .'</a> </div>'. $ads_12th['ad_script'] .'</div>
-                            <div class="content-single-page">';
-        }
-        for($i=1; $i<count($content_block); $i++)
-        {   
-            $content_block[$i] = '<p>'.$content_block[$i];
-        }
-        $content = implode('',$content_block);
-    } elseif( is_page('business-directory-sign-up') ){
+//     if( is_single() && ( get_post_type() === 'post' ) && !$hide_ads ){
+//         $content_block  = explode('<p>',$content);
+//         // changed after renaming the ads...
+//         $ads_6th        = get_ads_script('event-zone-1');
+//         $ads_12th       = get_ads_script('health-zone-1');
+//         if( !empty($content_block[7]) && $ads_6th)
+//         {               
+//             $content_block[7] .= '</div>
+//                             <div class="brown-bar b7"><div class="qcity-ads-label '.$hide_ads.'">'. $ads_6th['ads_label'] .' <a href="'. $ads_6th['ads_link_url'] .'">'. $ads_6th['ads_link_text'] .'</a> </div>'. $ads_6th['ad_script'] .'</div>
+//                             <div class="content-single-page">';
+//         }
+//         if( !empty($content_block[13]) && $ads_12th)
+//         {               
+//             $content_block[13] .= '</div>
+//                             <div class="brown-bar b13"><div class="qcity-ads-label '.$hide_ads.'">'. $ads_12th['ads_label'] .' <a href="'. $ads_12th['ads_link_url'] .'">'. $ads_12th['ads_link_text'] .'</a> </div>'. $ads_12th['ad_script'] .'</div>
+//                             <div class="content-single-page">';
+//         }
+//         for($i=1; $i<count($content_block); $i++)
+//         {   
+//             $content_block[$i] = '<p>'.$content_block[$i];
+//         }
+//         $content = implode('',$content_block);
+//     } elseif( is_page('business-directory-sign-up') ){
 
-        //add_filter( 'gform_pre_render', 'qcity_insert_packages' );
+//         //add_filter( 'gform_pre_render', 'qcity_insert_packages' );
 
-        $content_block  = explode('<p>',$content);
+//         $content_block  = explode('<p>',$content);
 
-        //r_dump($content_block);
+//         //r_dump($content_block);
 
-        if( !empty($content_block[2])){
+//         if( !empty($content_block[2])){
 
-            $packages = get_field('packages');
+//             $packages = get_field('packages');
 
-            if( $packages ): 
-                    $content_block[2] .= '<section class="tiers membership-thirds pricing-grid signup">';
-                foreach( $packages as $package): 
+//             if( $packages ): 
+//                     $content_block[2] .= '<section class="tiers membership-thirds pricing-grid signup">';
+//                 foreach( $packages as $package): 
                         
-                        $title  = $package['package_title'];
-                        $desc   = $package['package_details'];
+//                         $title  = $package['package_title'];
+//                         $desc   = $package['package_details'];
 
-                        if( $title ):
-                            $content_block[2] .= '<div class="third plan">
-                            <h3>'. $title .'</h3> '. $desc .'
-                            </div>
-                            ';
-                        endif;                         
-                endforeach;
-                $content_block[2] .= '</section>';     
-                ?>
-            <?php endif; ?>    
+//                         if( $title ):
+//                             $content_block[2] .= '<div class="third plan">
+//                             <h3>'. $title .'</h3> '. $desc .'
+//                             </div>
+//                             ';
+//                         endif;                         
+//                 endforeach;
+//                 $content_block[2] .= '</section>';     
+//                 
+//                 endif;     
 
-        <?php }
+//          }
 
-            for($i=1; $i<count($content_block); $i++)
-            {   
-                $content_block[$i] = '<p>'.$content_block[$i];
-            }
-            $content = implode('',$content_block);   
+//             for($i=1; $i<count($content_block); $i++)
+//             {   
+//                 $content_block[$i] = '<p>'.$content_block[$i];
+//             }
+//             $content = implode('',$content_block);   
 
-    }
-    return $content;    
-}
+//     }
+//     return $content;    
+// }
 
 
 

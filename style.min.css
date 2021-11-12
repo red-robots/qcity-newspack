@@ -3933,7 +3933,7 @@ p#wp-block-jetpack-mailchimp_consent-text{display:none}
 .ortho-caro,.ortho-caro.has-background{padding-left:20px !important;padding-right:20px !important}
 #above-footer{width:100%;text-align:center;padding:30px 0}
 .newspack_global_ad.global_above_header{margin-top:100px}
-.btn-desktop{display:none}
+.wp-block-buttons>.wp-block-button.btn-desktop{display:none}
 .sponsored-events-col{padding:0 20px}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}
 .c-sponsor-block__label{position:static}
@@ -4110,8 +4110,8 @@ ul.rp4wp-posts-list .rp4wp-col-last{width:99% !important;padding-right:0 !import
 .new-chapter figure{padding:10px}
 .ortho-caro,.ortho-caro.has-background{padding-left:30px !important;padding-right:30px !important}
 .newspack_global_ad.global_above_header{margin-top:0}
-.btn-desktop{display:block}
-.btn-mobile{display:none}
+.wp-block-buttons>.wp-block-button.btn-desktop{display:block}
+.wp-block-buttons>.wp-block-button.btn-mobile{display:none}
 .sponsored-events-col{padding:0}
 }@media screen and (min-width:768px) and (max-width:1249px){section.home-bottom .jobs,section.home-bottom .biz-dir{margin-right:15px}
 }@media only screen and (min-width:782px){.page-title{font-size:20px}

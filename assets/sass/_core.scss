@@ -13722,13 +13722,13 @@ p#wp-block-jetpack-mailchimp_consent-text {
 		margin-top: 0;
 	}
 }
-.btn-desktop {
+.wp-block-buttons>.wp-block-button.btn-desktop {
 	display: none;
 	@media screen and (min-width: $tabwidth) {
 		display: block;
 	}
 }
-.btn-mobile {
+.wp-block-buttons>.wp-block-button.btn-mobile {
 	@media screen and (min-width: $tabwidth) {
 		display: none;
 	}

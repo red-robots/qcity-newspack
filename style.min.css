@@ -3936,6 +3936,7 @@ p#wp-block-jetpack-mailchimp_consent-text{display:none}
 .wp-block-buttons>.wp-block-button.btn-desktop{display:none}
 .wp-block-buttons>.wp-block-button.btn-mobile{margin-left:20px}
 .sponsored-events-col{padding:0 20px}
+.newspack_global_ad.sticky button{right:20px !important;top:200px !important}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}
 .c-sponsor-block__label{position:static}
 .c-sponsor-block__sponsor{font-size:.85rem;margin-top:35px}

@@ -13722,3 +13722,20 @@ p#wp-block-jetpack-mailchimp_consent-text {
 		margin-top: 0;
 	}
 }
+.btn-desktop {
+	display: none;
+	@media screen and (min-width: $tabwidth) {
+		display: block;
+	}
+}
+.btn-mobile {
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+	}
+}
+.sponsored-events-col {
+	padding: 0 20px;
+	@media screen and (min-width: $tabwidth) {
+		padding: 0;
+	}
+}

@@ -13729,6 +13729,7 @@ p#wp-block-jetpack-mailchimp_consent-text {
 	}
 }
 .wp-block-buttons>.wp-block-button.btn-mobile {
+	margin-left: 20px;
 	@media screen and (min-width: $tabwidth) {
 		display: none;
 	}

@@ -200,14 +200,14 @@ function ii_custom_taxonomies() {
                 'taxonomy'  => 'level',
                 'slug'      => array('slug' => 'level', 'with_front' => false)
             ),
-            array(
-                'post_type' => 'event',
-                'menu_name' => 'Tags',
-                'plural'    => 'Tags',
-                'single'    => 'Tag',
-                'taxonomy'  => 'post_tag',
-                'slug'      => array('slug' => 'tag', 'with_front' => false)
-            )
+            // array(
+            //     'post_type' => array('event','post'),
+            //     'menu_name' => 'Tags',
+            //     'plural'    => 'Tags',
+            //     'single'    => 'Tag',
+            //     'taxonomy'  => 'post_tag',
+            //     'slug'      => array('slug' => 'tag', 'with_front' => false)
+            // )
         );
     
     if($posts) {

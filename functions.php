@@ -13,7 +13,12 @@ add_post_type_support( 'sponsor', 'newspack_blocks' );
 add_post_type_support( 'story', 'newspack_blocks' );
 
 
-
+add_action( 'init', 'wpshout_add_taxonomies_to_courses' );
+function wpshout_add_taxonomies_to_courses() {
+	// register_taxonomy_for_object_type( 'category', 'course' );
+	// register_taxonomy_for_object_type( 'difficulty', 'course' );
+	register_taxonomy_for_object_type( 'post_tag', 'event' );
+}
 /**
  * Newspack Theme only works in WordPress 4.7 or later.
  */

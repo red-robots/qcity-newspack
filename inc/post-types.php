@@ -205,8 +205,8 @@ function ii_custom_taxonomies() {
                 'menu_name' => 'Tags',
                 'plural'    => 'Tags',
                 'single'    => 'Tag',
-                'taxonomy'  => 'event_tag',
-                'slug'      => array('slug' => 'event-tag', 'with_front' => false)
+                'taxonomy'  => 'post_tag',
+                'slug'      => array('slug' => 'tag', 'with_front' => false)
             )
         );
     

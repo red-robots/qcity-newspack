@@ -1153,6 +1153,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Homepage Shortcode.
+ */
+require get_template_directory() . '/inc/sponsored-events-shortcode.php';
+
+/**
  * Logo Resizer.
  */
 require get_template_directory() . '/inc/logo-resizer.php';

@@ -7054,11 +7054,11 @@ body.page-template-page-membership {
 
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   width: 100%
+// }
 
 
 @media screen and (min-width:320px) and (max-width:640px) {
@@ -13743,4 +13743,16 @@ p#wp-block-jetpack-mailchimp_consent-text {
 .newspack_global_ad.sticky button {
 	right: 20px !important;
     top: 200px !important;
+}
+article.sp-event-sc {
+	min-height: 37vh;
+	padding-top: 7.4vh;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	.entry-wrapper p.event-date-sc {
+		color: #fff;
+		font-size: 16px !important;
+		margin-top: 10px;
+	}
 }

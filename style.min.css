@@ -3936,8 +3936,14 @@ p#wp-block-jetpack-mailchimp_consent-text{display:none}
 .wp-block-buttons>.wp-block-button.btn-mobile{margin-left:20px}
 .sponsored-events-col{padding:0 20px}
 .newspack_global_ad.sticky button{right:20px !important;top:200px !important}
-article.sp-event-sc{min-height:37vh;padding-top:7.4vh}
-article.sp-event-sc .entry-wrapper p.event-date-sc{color:#fff;font-size:16px !important;margin-top:10px}
+article.sp-event-sc{min-height:37vh;padding-top:7.4vh;position:relative;background-color:#000}
+article.sp-event-sc img{-webkit-transition:all ease .3s;transition:all ease .3s}
+article.sp-event-sc:hover img{opacity:.5}
+article.sp-event-sc figure a{width:100%;height:100%;top:0;left:0;position:absolute;display:block}
+article.sp-event-sc .entry-wrapper{width:100%;position:relative}
+article.sp-event-sc .entry-wrapper p.event-date-sc{color:#000;font-size:16px !important;margin:0}
+article.sp-event-sc .entry-wrapper h2.entry-title{color:#fff;text-decoration:none}
+article.sp-event-sc .event-fp-date{width:auto;position:absolute;bottom:-15px;left:0;background-color:#c4a92f;padding:8px}
 @media(min-width:40.625em){section.c-sponsor-block{grid-template-areas:'text image-wrap';grid-template-columns:repeat(auto-fit,minmax(200px,auto));padding-top:.92rem;margin-bottom:30px;width:100%}
 .c-sponsor-block__label{position:static}
 .c-sponsor-block__sponsor{font-size:.85rem;margin-top:35px}
@@ -4003,7 +4009,6 @@ nav.mobilemenu .mobilemain{display:none}
 .qcwrapper-header{width:100%}
 .qcwrapper,body.single .site-footer .qcwrapper{width:100%}
 .qcwrapper .right,.qcwrapper .left,body.single .site-footer .qcwrapper .right,body.single .site-footer .qcwrapper .left{width:46%}
-body.category #content{margin-top:140px}
 .content-area-title{width:66%;float:left;margin:0}
 .content-area{width:68%;float:left;margin:0;padding-bottom:50px;min-height:800px}
 .widget-area{width:28%;float:right;margin:0;clear:none;padding-bottom:40px}
@@ -4451,7 +4456,6 @@ body.single-post .post-bottom-widgets .trending-widget-bottom,#primary.single-po
 .qcwrapper,body.single .site-footer .qcwrapper{padding:0}
 body.single .qcwrapper{max-width:1090px}
 body.category .qcwrapper{max-width:1050px}
-#content{margin-top:120px}
 header.biz h1{font-size:28px}
 .banner .banner-info h1.biz{margin-bottom:30px;font-size:30px}
 .banner .banner-info .sub{margin-bottom:30px;font-size:22px}
@@ -4647,6 +4651,7 @@ article.big-post h3{font-size:20px}
 body.single-post .form-subscribe-blue .gform_wrapper,body.single-post .form-subscribe-blue form,body.single-post .form-subscribe-blue .gform_body,body.single-post .form-subscribe-blue ul,body.single-post .form-subscribe-blue li{width:100% !important;float:left}
 body.single-post .form-subscribe-blue .gform_wrapper .ginput_container{margin-bottom:15px}
 body.single-post .form-subscribe-blue .gform_footer input.gform_button{padding-top:0;padding-bottom:0}
+.wpnbha article .entry-title,.wpnbha.ts-2 article .entry-title{font-size:1.2em !important}
 }@media(max-width:768px){.site-footer{position:relative}
 .site-footer-overlay{background-image:url("images/logo-footer.png");background-repeat:no-repeat;background-position:center;opacity:.057;height:175px;margin-top:88px}
 .footer-main-nav ul li a{color:white}

@@ -50,19 +50,23 @@ function sponsored_events_shortcode( $atts ) {
 		?>
 		
 				<article data-post-id="<?php echo $id; ?>" class="sp-event-sc tag-homepage-sponsored-event type-event post-has-image">
+					<a href="<?php the_permalink(); ?>">
 					<figure class="post-thumbnail">
-						<a href="<?php the_permalink(); ?>">
+						
 							<img width="400" height="400" src="<?php echo $img['url']; ?>?resize=400%2C300&ssl=1" class="attachment-newspack-article-block-landscape-small size-newspack-article-block-landscape-small wp-post-image jetpack-lazy-image jetpack-lazy-image--handled" alt loading="eager" object-fit="cover" data-lazy-loaded="1" sizes="(max-width: 400px) 100vw, 400px">
-						</a>
+						
 					</figure>
 					<div class="entry-wrapper">
 						<h2 class="entry-title">
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-							<p class="event-date-sc">
-								<?php echo $date->format('l'); ?>, <?php echo $date->format('F j, Y'); ?>
-							</p>
+							<?php the_title(); ?>
+							<div class="event-fp-date">
+								<p class="event-date-sc">
+									<?php echo $date->format('l'); ?>, <?php echo $date->format('F j, Y'); ?>
+								</p>
+							</div>
 						</h2>
 					</div>
+					</a>
 				</article>
 			
 <?php endwhile; ?>

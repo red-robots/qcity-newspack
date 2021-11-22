@@ -13722,6 +13722,9 @@ p#wp-block-jetpack-mailchimp_consent-text {
 		margin-top: 0;
 	}
 }
+.newspack_global_ad.global_above_footer {
+	clear:both;
+}
 .wp-block-buttons>.wp-block-button.btn-desktop {
 	display: none;
 	@media screen and (min-width: $tabwidth) {

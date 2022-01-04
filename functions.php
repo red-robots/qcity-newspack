@@ -432,7 +432,7 @@ add_action( 'template_redirect', 'newspack_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function newspack_scripts() {
-	wp_enqueue_style( 'newspack-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'newspack-style', get_stylesheet_uri(), array(), '0.0.2' );
 
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 

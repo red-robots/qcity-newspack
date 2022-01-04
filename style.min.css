@@ -2308,9 +2308,9 @@ nav.mobilemenu.show ul.main li ul.dropdown.active{max-height:1000px}
 .qcwrapper .right,.qcwrapper .left,body.single .site-footer .qcwrapper .right,body.single .site-footer .qcwrapper .left{width:100%;margin-bottom:30px}
 .qcwrapper .right,body.single .site-footer .qcwrapper .right{float:right}
 .qcwrapper .left,body.single .site-footer .qcwrapper .left{float:left}
-body.single .qcwrapper .button{width:auto;display:inline-block}
-body.single .qcwrapper .button a{padding:5px 15px}
-body.single #content,body.single #primary{position:relative;z-index:2}
+body.single .qcwrapper .button,body.page-template-default .qcwrapper .button{width:auto;display:inline-block}
+body.single .qcwrapper .button a,body.page-template-default .qcwrapper .button a{padding:5px 15px}
+body.single #content,body.single #primary,body.page-template-default #content,body.page-template-default #primary{position:relative;z-index:2}
 #content{width:100%;float:left;clear:both}
 .content-area-single{width:100%;margin:0 auto;max-width:700px}
 .content-area-title{width:100%;margin:0 auto}
@@ -4454,7 +4454,7 @@ body.single-post .post-bottom-widgets .trending-widget-bottom,#primary.single-po
 .qcwrapper-mnav{max-width:1150px}
 .qcwrapper-header{max-width:1250px;padding:0}
 .qcwrapper,body.single .site-footer .qcwrapper{padding:0}
-body.single .qcwrapper{max-width:1090px}
+body.single .qcwrapper,body.page-template-default .qcwrapper{max-width:1090px}
 body.category .qcwrapper{max-width:1050px}
 header.biz h1{font-size:28px}
 .banner .banner-info h1.biz{margin-bottom:30px;font-size:30px}

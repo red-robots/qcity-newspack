@@ -9,9 +9,9 @@
 
 get_header();
 ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="qcwrapper">
+	<section id="primary" class="content-area-full">
+		<main id="qcmain" class="site-main">
 			<?php
 
 			/* Start the Loop */
@@ -30,7 +30,7 @@ get_header();
 
 				<?php endif; ?>
 
-				<div class="main-content">
+				<div class="main-content-full">
 					<?php
 
 					// Place smaller featured images inside of 'content' area.
@@ -49,11 +49,11 @@ get_header();
 
 			<?php
 			endwhile; // End of the loop.
-			get_sidebar();
+			//get_sidebar();
 			?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
+</div>
 <?php
 get_footer();

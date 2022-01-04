@@ -1116,7 +1116,8 @@ body.single .site-footer .qcwrapper {
 	}
 	
 }
-body.single {
+body.single,
+body.page-template-default {
 	.qcwrapper {
 		@media screen and (min-width: $deskwidth) {
 			max-width: 1090px;

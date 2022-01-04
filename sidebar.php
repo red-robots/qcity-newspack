@@ -146,7 +146,7 @@ if( is_page('events') ) {
 	
 		<?php
 		/* SUBSCRIPTION FORM */
-		include( locate_template('sidebar-subscription-form.php') );
+		//include( locate_template('sidebar-subscription-form.php') );
 		?>
 
 		<?php

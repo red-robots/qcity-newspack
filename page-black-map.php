@@ -96,7 +96,11 @@ get_header(); ?>
 		$subscription_text = get_field("subscription_text"); 
 		$subscription_button = get_field("subscription_button"); 
 		$content_class = ( $sidebar_buttons && ($subscription_text || $subscription_button) ) ? 'half':'full';
-		?>
+		$show_right_col = false;
+    if($show_right_col==false){
+      $content_class = 'full';
+    }
+    ?>
 
 		<div class="entry-content <?php echo $content_class ?>">
 			<div class="qcwrapper">
@@ -104,18 +108,20 @@ get_header(); ?>
 					<?php the_content(); ?>
 				</div>
 
-				<?php if ( $sidebar_buttons || ($subscription_text || $subscription_button) ) { ?>
-				<div class="rightcol">
-					<div id="sticky-helper" class="helper"></div>
-					<div class="sb-inner-wrap">
-						<?php 
-						$template = basename(__FILE__, '.php'); 
-						include( locate_template('sidebar-map-page.php'));
-							//get_template_part('sidebar-map-page');
-						?>
-					</div>
-				</div>
-				<?php } ?>
+        <?php if ($show_right_col) { ?>
+  				<?php if ( $sidebar_buttons || ($subscription_text || $subscription_button) ) { ?>
+  				<div class="rightcol">
+  					<div id="sticky-helper" class="helper"></div>
+  					<div class="sb-inner-wrap">
+  						<?php 
+  						  $template = basename(__FILE__, '.php'); 
+  						  // include( locate_template('sidebar-map-page.php'));
+  							//get_template_part('sidebar-map-page');
+  						?>
+  					</div>
+  				</div>
+  				<?php } ?>
+        <?php } ?>
 				
 			</div>
 			

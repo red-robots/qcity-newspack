@@ -14,7 +14,38 @@ $current_term_name = ( isset($obj->name) && $obj->name ) ? $obj->name : '';
 $current_term_slug = ( isset($obj->slug) && $obj->slug ) ? $obj->slug : '';
 $whichCatId = get_field("elect_which_category","option");
 
-if($current_term_slug=='stories') {
+/* SPONSOR / POWERED BY */
+$poweredbyLogo = get_field('catPoweredByLogo', $obj);
+$poweredbyText = get_field('catPoweredByText', $obj);
+$poweredbyURL = get_field('catPoweredByURL', $obj);
+if ($poweredbyLogo) { ?>
+    
+  <div class="poweredbyInfo">
+    <div class="qcwrapper">
+      <?php if ($poweredbyText) { ?>
+       <div class="pwbtxt"><?php echo $poweredbyText ?></div> 
+      <?php } ?>
+      <?php if ($poweredbyLogo) { ?>
+        <div class="pwbLogo">
+          <?php if ($poweredbyURL) { ?>
+          <a href="<?php echo $poweredbyURL ?>" target="_blank">
+            <img src="<?php echo $poweredbyLogo['url'] ?>" alt="<?php echo $poweredbyLogo['title'] ?>">
+          </a>
+          <?php } else { ?>
+            <img src="<?php echo $poweredbyLogo['url'] ?>" alt="<?php echo $poweredbyLogo['title'] ?>">
+          <?php } ?>
+        </div> 
+      <?php } ?>
+    </div>
+  </div>
+
+<?php } else { ?>
+  
+  <div class="qcm-spacer"></div>
+
+<?php } ?>
+
+<?php if($current_term_slug=='stories') {
 
 	get_template_part('template-parts/content-category-stories');
 

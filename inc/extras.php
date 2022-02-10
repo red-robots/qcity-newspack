@@ -411,10 +411,16 @@ function qcity_add_in_newsletter_signup( $content ) {
         }
     }
 
-    ob_start();
-    get_template_part('template-parts/news-post-newsletter');
-    $ad_code = ob_get_contents();
-    ob_end_clean();
+    $show_generic_newsletter = get_field("show_generic_newsletter",$post_id);
+    $turn_ON_newsletter = ($show_generic_newsletter=='off') ? false : true;
+    if( $turn_ON_newsletter ) {
+
+      ob_start();
+      get_template_part('template-parts/news-post-newsletter');
+      $ad_code = ob_get_contents();
+      ob_end_clean();
+
+    }
 
     // $gfshortcode = '[gravityform id="'.$gravityFormId.'" title="false" description="false" ajax="true"]';
     // $ad_code = '<div id="subform-postid-'.$post_id.'" class="subscribe-form-single" style="margin-top: 20px;margin-bottom: 40px;">
@@ -1552,7 +1558,7 @@ function mobile_faq_sidebar_func( $atts ) {
     $mobile_class = 'mobile-only';
     $template = str_replace(".php","",$template_slug); 
     if($template) {
-        include( locate_template('sidebar-map-page.php') );
+      // include( locate_template('sidebar-map-page.php') );
     }
     $output = ob_get_contents();
     ob_end_clean();

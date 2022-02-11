@@ -177,6 +177,12 @@ if( !defined('HIDE_ADS') ){
 
 			<?php } ?>
 
+
+      <?php /* SPONSOR SUMMARY */ ?>
+      <?php get_template_part('template-parts/sponsor-bio'); ?>
+
+
+
 			<?php if ( comments_open() || get_comments_number() ) { ?>
 				<?php 
 					$commentCount = get_comments_number();

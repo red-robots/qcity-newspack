@@ -25,7 +25,65 @@ if($terms) {
 	}
 }
 $content_class = ($is_sponsored_post) ? 'is-sponsored-post':'normal-post';
-?>
+$poweredByInfo = array();
+if($terms) {
+  foreach($terms as $term) {
+    // $poweredbyLogo = get_field('catPoweredByLogo', $term);
+    // $poweredbyText = get_field('catPoweredByText', $term);
+    // $poweredbyURL = get_field('catPoweredByURL', $term);
+    $poweredbyLogo = '';
+    $poweredbyText = '';
+    $poweredbyURL = '';
+    $poweredbyDescription = '';
+    $sponsor = get_field('catSponsor', $term);
+    if($sponsor) {
+      $poweredbyText = ( isset($sponsor['label']) && $sponsor['label'] ) ? $sponsor['label'] : '';
+      if( isset($sponsor['sponsor']) && $sponsor['sponsor'] ) {
+        $sp_id = $sponsor['sponsor'];
+        $poweredbyLogo = get_field('logo',$sp_id);
+        $poweredbyURL = get_field('logo_hyperlink',$sp_id);
+        $poweredbyDescription = get_field('description',$sp_id);
+      }
+    }
+    if($poweredbyLogo) {
+      $poweredByInfo[] = array(
+        'term_id'=>$term->term_id,
+        'term_name'=>$term->name,
+        'poweredbyLogo'=>$poweredbyLogo,
+        'poweredbyURL'=>$poweredbyURL,
+        'poweredbyText'=>$poweredbyText,
+        'poweredbyDescription'=>$poweredbyDescription
+      );
+    }
+  }
+}
+
+if ($poweredByInfo) { 
+$poweredby_logo = $poweredByInfo[0]['poweredbyLogo'];
+$poweredby_link = $poweredByInfo[0]['poweredbyURL'];
+$poweredby_text = $poweredByInfo[0]['poweredbyText']; ?>
+  <div class="poweredbyInfo">
+    <div class="qcwrapper">
+      <?php if ($poweredby_text) { ?>
+       <div class="pwbtxt"><?php echo $poweredby_text ?></div> 
+      <?php } ?>
+      <?php if ($poweredby_logo) { ?>
+        <div class="pwbLogo">
+          <?php if ($poweredby_link) { ?>
+          <a href="<?php echo $poweredby_link ?>" target="_blank">
+            <img src="<?php echo $poweredby_logo['url'] ?>" alt="<?php echo $poweredby_logo['title'] ?>">
+          </a>
+          <?php } else { ?>
+            <img src="<?php echo $poweredby_logo['url'] ?>" alt="<?php echo $poweredby_logo['title'] ?>">
+          <?php } ?>
+        </div> 
+      <?php } ?>
+    </div>
+  </div>
+<?php } else { ?>
+  <div class="top-qcm-spacer"></div>
+<?php } ?>
+
 <div id="primary" class="content-area-full single-post-newlayout <?php echo $content_class ?>">
 	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>

@@ -6,10 +6,30 @@
     }
   }
 }
+body.single {
+  #content.site-content {
+    margin-top: 0;
+  }
+  #primary.single-post-newlayout .entry-footer .comments-section {
+    // max-width: 100%!important;
+    // width: 100%;
+  }
+  .tags {
+    max-width: 700px !important;
+    width: 100%;
+    margin: 0 auto 30px;
+    float: none;
+  }
+}
 body.category {
   .site-content {
     margin-top: 0;
   }
+}
+.top-qcm-spacer {
+  width: 100%;
+  float: left;
+  margin-top: 30px;
 }
 .qcm-spacer {
   width: 100%;
@@ -40,3 +60,12 @@ body.category {
     }
   }
 }
+
+.sponsoredDataDiv.sponsorInfo {
+  max-width: 700px;
+  width: 100%;
+  margin:0 auto 35px;
+  float: none;
+}
+
+

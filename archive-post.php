@@ -15,9 +15,21 @@ $current_term_slug = ( isset($obj->slug) && $obj->slug ) ? $obj->slug : '';
 $whichCatId = get_field("elect_which_category","option");
 
 /* SPONSOR / POWERED BY */
-$poweredbyLogo = get_field('catPoweredByLogo', $obj);
-$poweredbyText = get_field('catPoweredByText', $obj);
-$poweredbyURL = get_field('catPoweredByURL', $obj);
+// $poweredbyLogo = get_field('catPoweredByLogo', $obj);
+// $poweredbyText = get_field('catPoweredByText', $obj);
+// $poweredbyURL = get_field('catPoweredByURL', $obj);
+$poweredbyLogo = '';
+$poweredbyText = '';
+$poweredbyURL = '';
+$sponsor = get_field('catSponsor', $obj);
+if($sponsor) {
+  $poweredbyText = ( isset($sponsor['label']) && $sponsor['label'] ) ? $sponsor['label'] : '';
+  if( isset($sponsor['sponsor']) && $sponsor['sponsor'] ) {
+    $sp_id = $sponsor['sponsor'];
+    $poweredbyLogo = get_field('logo',$sp_id);
+    $poweredbyURL = get_field('logo_hyperlink',$sp_id);
+  }
+}
 if ($poweredbyLogo) { ?>
     
   <div class="poweredbyInfo">

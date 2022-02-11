@@ -80,7 +80,7 @@ body.single-post .oakland-background.oakland-optin-visible.oakland-lightbox{disp
 if( $customHeadScripts = get_field("custom_scripts_inside_head","option") ) { 
   echo $customHeadScripts;
 } ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/extra.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/extra.min.css">
 </head>
 <?php
 $dd = date('d') - 1;

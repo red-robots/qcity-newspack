@@ -35,6 +35,11 @@ $poweredby_logo = $poweredByInfo[0]['poweredbyLogo'];
 $poweredby_link = $poweredByInfo[0]['poweredbyURL'];
 $poweredby_label = $poweredByInfo[0]['poweredbyText'];
 $poweredby_description = $poweredByInfo[0]['poweredbyDescription'];
+
+$sp_info = get_field("spcontentInfo","option");
+//$sp_text = ( isset($sp_info['text']) && $sp_info['text'] ) ? $sp_info['text'] : '';
+$sp_text = '';
+
   if ($poweredby_logo) { ?>
   <div class="sponsoredDataDiv sponsorInfo">
     <div class="sponsoredInfoBox">
@@ -65,9 +70,12 @@ $poweredby_description = $poweredByInfo[0]['poweredbyDescription'];
       </div>
     </div>
 
+    <?php if ($sp_text) { ?>
     <div class="sponsoredInfoWrap">
-      <div class="sponsoredInfo">This content was paid for by an advertiser and created by QCity Metro's marketing team. Our reporters were not involved in that process.</div>
+      <div class="sponsoredInfo"><?php echo $sp_text ?></div>
     </div>
+    <?php } ?>
+    
 
   </div>
   <?php } ?>

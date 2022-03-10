@@ -182,7 +182,7 @@ if( !defined('HIDE_ADS') ){
       <?php get_template_part('template-parts/sponsor-bio'); ?>
 
 
-
+      
 			<?php if ( comments_open() || get_comments_number() ) { ?>
 				<?php 
 					$commentCount = get_comments_number();
@@ -211,6 +211,8 @@ if( !defined('HIDE_ADS') ){
 					</div>			
 				</div>
 			<?php }  ?>
+
+      
 
 			<?php if( has_tag() ) { ?>
 				<div class="tags">	

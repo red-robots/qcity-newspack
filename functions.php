@@ -541,12 +541,12 @@ function newspack_enqueue_scripts() {
 			true 
 		);
 
-	wp_enqueue_script( 
-			'acstarter-cookie', 
-			get_template_directory_uri() . '/js/cookie.js', 
-			array(), '2.2', 
-			true 
-		);
+	// wp_enqueue_script( 
+	// 		'acstarter-cookie', 
+	// 		get_template_directory_uri() . '/js/cookie.js', 
+	// 		array(), '2.2', 
+	// 		true 
+	// 	);
 
 	wp_enqueue_script( 
 			'acstarter-slider', 

@@ -12,7 +12,7 @@
 // Local project URL of your already running WordPress site.
 // > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
-const projectURL = 'wpgulp.local';
+const projectURL = 'https://qcitymetro.test/';
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const productURL = './';
@@ -26,15 +26,15 @@ const styleSRC = './assets/sass/style.scss';
 // Path to place the compiled CSS file. Default set to root folder.
 const styleDestination = './';
 
-// Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
-const outputStyle = 'compact';
+// Available options → 'compressed' or 'expanded'
+const outputStyle = 'compressed';
 const errLogToConsole = true;
 const precision = 10;
 
 // JS Vendor options.
 
 // Path to JS vendor folder.
-const jsVendorSRC = './assets/js/vendors/*.js';
+const jsVendorSRC = './assets/js/vendor/*.js';
 
 // Path to place the compiled JS vendors file.
 const jsVendorDestination = './assets/js/';
@@ -68,7 +68,7 @@ const imgDST = './assets/img/';
 const watchStyles = './assets/sass/**/*.scss';
 
 // Path to all vendor JS files.
-const watchJsVendor = './assets/js/vendors/*.js';
+const watchJsVendor = './assets/js/vendor/*.js';
 
 // Path to all custom JS files.
 const watchJsCustom = './assets/js/custom/*.js';

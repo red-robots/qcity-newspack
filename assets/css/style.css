@@ -1,0 +1,17 @@
+/* Error: 0.8rem*em isn't a valid CSS value.
+ *      ,
+ * 5797 |   font-size: calc( 1rem * 0.8em);
+ *      |              ^^^^^^^^^^^^^^^^^^^
+ *      '
+ *   sass/_newspack.scss 5797:14  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 0.8rem*em isn't a valid CSS value.\a      \2577 \a 5797 \2502    font-size: calc( 1rem * 0.8em);\a      \2502               ^^^^^^^^^^^^^^^^^^^\a      \2575 \a   sass/_newspack.scss 5797:14  root stylesheet";
+}

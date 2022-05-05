@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *   ,
+ * 2 |     font-size: $font__size_base_sm;
+ *   |                ^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass/typography/_typography.scss 2:13  @import
+ *   sass/style-base.scss 10:9              root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502      font-size: $font__size_base_sm;\a   \2502                 ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/typography/_typography.scss 2:13  @import\a   sass/style-base.scss 10:9              root stylesheet";
+}

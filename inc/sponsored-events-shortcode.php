@@ -78,3 +78,66 @@ function sponsored_events_shortcode( $atts ) {
 }
 
 add_shortcode( 'sponsored_events', 'sponsored_events_shortcode' );
+
+
+/* REST API 
+ * URL=> https://qcitymetro.com/wp-json/wp/v2/sponsored-events?perpage=10
+*/
+add_action( 'rest_api_init', function () {
+  // register a new endpoint
+  register_rest_route( 'wp/v2', '/sponsored-events/', array(
+    'methods' => 'GET',
+    'callback' => 'fetch_by_api_sponsored_events', // that calls this function
+  ) );
+
+} );
+
+function fetch_by_api_sponsored_events( WP_REST_Request $request ) {
+
+  $day = date('d');
+  $day2 = $day - 1;
+  $day_plus = sprintf('%02s', $day);
+  $today = date('Ym') . $day_plus;
+  $per_page = ($request->get_param( 'perpage' )) ? $request->get_param( 'perpage' ) : 3;
+
+  $args = array(
+    'post_type'=>'event',
+    'posts_per_page' => $per_page,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'event_category', 
+        'field' => 'slug',
+        'terms' => array( 'premium' ) 
+      )
+    ),
+    'order' => 'ASC',
+    'meta_key' => 'event_date',
+    'orderby' => 'meta_value_num',
+    'meta_query' => array(
+      array(
+        'key' => 'event_date',
+        'compare' => '>=',
+        'value' => $today,
+      ),    
+    )
+  );  
+
+  $results = get_posts($args);
+  if ( $results ) {
+    foreach($results as $row) {
+      $id = $row->ID;
+      $date = get_field("event_date", false, false, $id);
+      $date = new DateTime($date);
+      $img = get_field('event_image',$id);
+      $row->event_image = $img;
+      $row->event_date = $date->format('F j, Y');
+      $row->event_date_full = array($date->format('l'),$date->format('F j, Y'));
+    }
+  }
+  return $results;
+}
+
+
+
+
+

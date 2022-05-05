@@ -1682,4 +1682,65 @@ function show_page_template() {
     return basename($template);
 }
 
+add_action( 'wp_enqueue_scripts', 'qcty_custom_scripts' );
+function qcty_custom_scripts() {
+  wp_enqueue_script( 
+    'cookie-scripts', 
+    get_template_directory_uri() . '/js/cookie.js', 
+    array(), '20220412', 
+    true 
+  );
+}
+
+add_shortcode( 'sponsored_events_new', 'sponsored_events_new_shortcode' );
+function sponsored_events_new_shortcode($atts) {
+  $a = shortcode_atts( array(
+    'perpage' =>  3,
+  ), $atts );
+  $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 3;
+  $url = 'https://livincharlotte.com/wp-json/wp/v2/sponsored-events?perpage=' . $perpage;
+  $jsonData = @file_get_contents($url);
+  $events = ($jsonData) ? @json_decode($jsonData) : '';
+  $output = '';
+  ob_start();
+  if($events) { ?>
+  <div id="livincharlotte-featured-events" class="wp-block-newspack-blocks-homepage-articles sponsored-events-col wpnbha is-grid columns-3 show-image image-alignbehind ts-2 is-3 is-landscape sponsored-events-col has-text-align-left">
+    <div class="wp-posts-inner">
+      <?php foreach ($events as $e) { 
+        $id = $e->ID;
+        $img = $e->featured_image;
+        $imgMeta = ( isset($img->meta) && $img->meta ) ? $img->meta : '';
+        $imgURL = ( isset($img->url) && $img->url ) ? $img->url : '';
+        $start_date = $e->event_date;
+        $start_date_full = (isset($start_date->start_date_format1) && $start_date->start_date_format1) ? $start_date->start_date_format1 : '';
+        $hasImage = ($imgURL) ? 'post-has-image':'post-no-image';
+        ?>
+        <article data-post-id="<?php echo $id; ?>" class="sp-event-sc tag-homepage-sponsored-event type-event <?php echo $hasImage ?>">
+          <a href="<?php echo $e->pagelink; ?>" target="_blank">
+            <?php if($imgURL) { ?>
+            <figure class="post-thumbnail">
+                <img width="400" height="400" src="<?php echo $imgURL; ?>?resize=400%2C300&ssl=1" class="attachment-newspack-article-block-landscape-small size-newspack-article-block-landscape-small wp-post-image jetpack-lazy-image jetpack-lazy-image--handled" alt="<?php echo $img->title ?>" loading="eager" object-fit="cover" data-lazy-loaded="1" sizes="(max-width: 400px) 100vw, 400px">
+            </figure>
+            <?php } ?>
+            <div class="entry-wrapper">
+              <h2 class="entry-title">
+                <?php echo $e->post_title; ?>
+                <?php if ($start_date_full) { ?>
+                <div class="event-fp-date">
+                  <p class="event-date-sc" style="font-size:14px!important"><?php echo $start_date_full ?></p>
+                </div>
+                <?php } ?>
+              </h2>
+            </div>
+          </a>
+        </article>
+      <?php } ?>
+    </div>
+  </div>
+  <?php }
+
+  $output = ob_get_contents();
+  ob_end_clean(); 
+  return $output;
+}
 

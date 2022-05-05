@@ -32,9 +32,9 @@ function qcity_comment_form_default_fields( $fields ) {
 
 
     $fields = [
-      'author' => '<p class="comment-form-author" style="width:100%!important;">' . '<label for="author">' . __( 'Name', 'textdomain'  ) . '<span class="required">*</span></label> ' .
-                  '<input id="author" name="author" type="text" value="' . esc_attr($author_name) . '" size="30" maxlength="245" required /></p>',
-      'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment *', 'noun', 'textdomain' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required></textarea></p>',
+      'author' => '<p class="comment-form-author" style="width:100%!important;">' . '<label for="author">' . __( 'Name', 'textdomain'  ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                  '<input id="author" name="author" type="text" value="' . esc_attr($author_name) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
+      'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment *', 'noun', 'textdomain' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
       'recaptcha_field' => '<div id="gRecaptcha" class="g-recaptcha" data-sitekey="'.$key['site_key'].'"></div>',
     ];
 
@@ -101,12 +101,11 @@ function notify_for_new_comment($comment_id,$postid) {
             $subject = 'New Comment from ' . $comment->comment_author;
             
             $message = 'New comment on <strong><a href="' . get_permalink( $postid ) . '">' .  get_the_title( $postid ) . '</a></strong><br>';
-            //$message .= '<p>Name: '. $comment->comment_author .'<br>';
-            //$message .= 'Email: '. $comment->comment_author_email .'<br>';
-            //$message .= 'City: '. $city .'<br>';
-            //$message .= 'Daytime Phone: '. $phone .'<br>';
-            //$message .= '</p>';
-            $message .= '<p>Name: '. $comment->comment_author .'</p>';
+            $message .= '<p>Name: '. $comment->comment_author .'<br>';
+            $message .= 'Email: '. $comment->comment_author_email .'<br>';
+            $message .= 'City: '. $city .'<br>';
+            $message .= 'Daytime Phone: '. $phone .'<br>';
+            $message .= '</p>';
             $message .= 'Content:<br>'. $comment->comment_content;
             
             add_filter( 'wp_mail_content_type', create_function( '', 'return "text/html";' ) );
